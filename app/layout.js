@@ -19,6 +19,10 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  themeColor: "#f5f5f7",
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
