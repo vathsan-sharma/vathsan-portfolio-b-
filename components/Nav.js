@@ -1,22 +1,24 @@
 export default function Nav() {
   return (
     <header className="nav">
-      <strong className="nav-name">Vathsan</strong>
+      <a href="/" className="nav-name">
+        Vathsan
+      </a>
       <ul>
         <li>
-          <a href="#story">Story</a>
+          <a href="/about">Story</a>
         </li>
         <li>
-          <a href="#work">Work</a>
+          <a href="/work">Work</a>
         </li>
         <li>
-          <a href="#teaching">Teaching</a>
+          <a href="/teaching">Teaching</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="/faq">FAQ</a>
         </li>
       </ul>
-      <a href="#contact" className="nav-cta">
+      <a href="/#contact" className="nav-cta">
         Book a call
       </a>
     </header>

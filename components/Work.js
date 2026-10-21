@@ -1,8 +1,5 @@
-const cases = [
-  { name: "B2B SaaS", text: "LinkedIn ads, content funnels, and automated lead nurture." },
-  { name: "EdTech", text: "Student enrolments through performance marketing and community." },
-  { name: "Cloud POS", text: "B2B lead generation for retail and hospitality." },
-];
+import Link from "next/link";
+import { cases } from "../lib/cases";
 
 export default function Work() {
   return (
@@ -11,9 +8,11 @@ export default function Work() {
       <h2 className="chapter-title">Stories, not screenshots.</h2>
       <div className="cases">
         {cases.map((c) => (
-          <article className="case" key={c.name}>
-            <h3>{c.name}</h3>
-            <p>{c.text}</p>
+          <article className="case" key={c.slug}>
+            <h3>
+              <Link href={`/work/${c.slug}`}>{c.name}</Link>
+            </h3>
+            <p>{c.summary}</p>
           </article>
         ))}
       </div>

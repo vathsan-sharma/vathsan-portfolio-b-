@@ -15,7 +15,7 @@ export default function Hero() {
           <a className="pill pill-dark" href="#contact">
             Book a call
           </a>
-          <a className="pill pill-line" href="#story">
+          <a className="pill pill-line" href="/about">
             Read the story ›
           </a>
         </div>

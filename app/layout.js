@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { SITE_URL, SITE_NAME } from "../lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -8,13 +9,18 @@ const inter = Inter({
 });
 
 export const metadata = {
-  title: "Vathsan Sharma · Growth, built from the ground up",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: "Vathsan Sharma · Growth, built from the ground up",
+    template: "%s · Vathsan Sharma",
+  },
   description:
     "Vathsan Sharma: performance marketer and growth strategist with 9+ years, $1.5M+ in managed ad spend, and a mechatronics background.",
   openGraph: {
     title: "Vathsan Sharma · Growth, built from the ground up",
     description:
       "Performance marketer and growth strategist with 9+ years in paid media and a mechatronics background.",
+    siteName: SITE_NAME,
     type: "website",
   },
 };
