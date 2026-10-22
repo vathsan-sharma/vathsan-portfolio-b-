@@ -21,7 +21,19 @@ export const metadata = {
     description:
       "Performance marketer and growth strategist with 9+ years in paid media and a mechatronics background.",
     siteName: SITE_NAME,
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Vathsan Sharma · Growth, built from the ground up",
+    description:
+      "Performance marketer and growth strategist with 9+ years in paid media and a mechatronics background.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
 };
 

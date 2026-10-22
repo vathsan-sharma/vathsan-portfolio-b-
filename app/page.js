@@ -7,16 +7,18 @@ import Teaching from "../components/Teaching";
 import Credentials from "../components/Credentials";
 import Contact from "../components/Contact";
 import JsonLd from "../components/JsonLd";
-import { personSchema } from "../lib/schema";
+import { personSchema, websiteSchema } from "../lib/schema";
 
 export const metadata = {
   alternates: { canonical: "/" },
+  openGraph: { url: "/" },
 };
 
 export default function Home() {
   return (
     <main className="wrap" id="main">
       <JsonLd data={personSchema()} />
+      <JsonLd data={websiteSchema()} />
       <a className="skip-link" href="#story">
         Skip to content
       </a>
