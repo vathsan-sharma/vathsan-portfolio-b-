@@ -4,6 +4,7 @@ import Proof from "../components/Proof";
 import StoryChapters from "../components/StoryChapters";
 import Work from "../components/Work";
 import Speaking from "../components/Speaking";
+import MomentStrip from "../components/MomentStrip";
 import Credentials from "../components/Credentials";
 import Contact from "../components/Contact";
 import JsonLd from "../components/JsonLd";
@@ -28,6 +29,7 @@ export default function Home() {
       <StoryChapters />
       <Work />
       <Speaking />
+      <MomentStrip />
       <Credentials />
       <Contact />
     </main>

@@ -32,6 +32,9 @@ export default function AboutPage() {
         <a className="pill pill-line" href="/journey">
           See the full journey ›
         </a>
+        <a className="pill pill-line" href="/gallery">
+          See the photos ›
+        </a>
       </p>
       <Credentials />
     </PageShell>

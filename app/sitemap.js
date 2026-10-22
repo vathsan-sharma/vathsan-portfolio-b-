@@ -3,7 +3,7 @@ import { cases } from "../lib/cases";
 import { posts } from "../lib/posts";
 
 export default function sitemap() {
-  const staticPaths = ["/", "/about", "/journey", "/work", "/teaching", "/faq"];
+  const staticPaths = ["/", "/about", "/journey", "/gallery", "/work", "/teaching", "/faq"];
   if (posts.length > 0) staticPaths.push("/blog");
 
   return [
