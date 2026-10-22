@@ -737,7 +737,8 @@ a:focus-visible {
 .tool-row img {
   display: block;
   width: auto;
-  height: 44px;
+  height: 36px;
+  max-width: 120px;
   filter: grayscale(100%);
   opacity: 0.75;
   transition: filter 0.3s ease, opacity 0.3s ease;
@@ -750,4 +751,58 @@ a:focus-visible {
 /* Tiles on black bands: dark tiles so the light numbers stay readable */
 .band.black .tile {
   background: #1d1d1f;
+}
+
+/* Scroll animations for inner pages and content.
+   Elements fade and rise as they enter the viewport. Browsers without
+   scroll-driven animations show everything at rest, and reduced-motion
+   users get no motion (see the global reduced-motion rule above). */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@supports (animation-timeline: view()) {
+  .page-head,
+  .journey-steps li,
+  .project-list li,
+  .faq-item,
+  .post-list li,
+  .case-section,
+  .gallery-item,
+  .moment,
+  .creds,
+  .tools,
+  .contact-meta,
+  .footer,
+  .prose,
+  .journey,
+  .gallery-grid > figure {
+    animation: fade-up linear both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 28%;
+  }
+}
+
+/* Small polish on navigation and logos */
+.nav ul a {
+  transition: opacity 0.2s ease;
+}
+.nav ul a:hover {
+  opacity: 0.6;
+}
+.tool-row img {
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease,
+    transform 0.3s ease;
+}
+.tool-row li:hover img {
+  transform: translateY(-2px);
 }

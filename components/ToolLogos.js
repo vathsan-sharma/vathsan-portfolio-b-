@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { tools } from "../lib/tools";
 
 export default function ToolLogos() {
@@ -8,13 +7,7 @@ export default function ToolLogos() {
       <ul className="tool-row">
         {tools.map((tool) => (
           <li key={tool.name}>
-            <Image
-              src={tool.src}
-              alt={`${tool.name} logo`}
-              width={tool.width}
-              height={tool.height}
-              sizes="120px"
-            />
+            <img src={tool.src} alt={`${tool.name} logo`} loading="lazy" />
           </li>
         ))}
       </ul>
