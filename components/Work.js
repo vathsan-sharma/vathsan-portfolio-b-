@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { cases } from "../lib/cases";
+import ToolLogos from "./ToolLogos";
 
 export default function Work() {
   return (
@@ -16,6 +17,7 @@ export default function Work() {
           </article>
         ))}
       </div>
+      <ToolLogos />
     </section>
   );
 }

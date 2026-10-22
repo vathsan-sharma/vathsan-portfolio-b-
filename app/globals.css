@@ -719,3 +719,35 @@ a:focus-visible {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Tool logos: greyscale until hovered, to match the black-and-white palette */
+.tools {
+  margin-top: 56px;
+}
+.tool-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px 56px;
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+.tool-row img {
+  display: block;
+  width: auto;
+  height: 44px;
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+.tool-row li:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Tiles on black bands: dark tiles so the light numbers stay readable */
+.band.black .tile {
+  background: #1d1d1f;
+}
