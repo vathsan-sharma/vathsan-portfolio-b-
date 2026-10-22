@@ -32,7 +32,7 @@ export default function OpengraphImage() {
             I once taught robots to follow a line. Now I build campaigns that follow the customer.
           </div>
         </div>
-        <div style={{ fontSize: 24, color: "#86868b" }}>vathsan-portfolio-b.vercel.app</div>
+        <div style={{ fontSize: 24, color: "#86868b" }}>www.vathsansharma.com</div>
       </div>
     ),
     { ...size }
