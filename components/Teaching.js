@@ -7,7 +7,7 @@ export default function Teaching() {
         Corporate training as an internationally certified trainer for government bodies, NGOs, and
         Hatch. Panelist at the 1st International Research Conference on Digital Marketing (ReDM 2026).
         Visiting lecturer at ACIDM and TrendsEd.{" "}
-        <span className="placeholder">[500+ trained, confirm]</span>
+        500+ trained.
       </p>
     </section>
   );

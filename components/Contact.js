@@ -14,7 +14,7 @@ export default function Contact() {
       <footer className="footer">
         <span>© Vathsan Sharma</span>
         <span>
-          Phone number hidden <span className="placeholder">[confirm]</span>
+          Phone number hidden
         </span>
       </footer>
     </section>

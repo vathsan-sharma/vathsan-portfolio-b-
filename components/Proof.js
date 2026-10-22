@@ -1,7 +1,7 @@
 const figures = [
   { num: "9+", cap: "years in paid media" },
   { num: "$1.5M+", cap: "ad spend managed" },
-  { num: "200+", cap: "clients served", note: "[confirm]" },
+  { num: "200+", cap: "clients served" },
 ];
 
 export default function Proof() {
@@ -10,10 +10,7 @@ export default function Proof() {
       {figures.map((f) => (
         <div key={f.cap}>
           <p className="num">{f.num}</p>
-          <p className="cap">
-            {f.cap}
-            {f.note && <span className="placeholder"> {f.note}</span>}
-          </p>
+          <p className="cap">{f.cap}</p>
         </div>
       ))}
     </section>
