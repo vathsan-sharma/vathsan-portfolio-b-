@@ -8,7 +8,7 @@ export function GET() {
   const body = [
     "# Vathsan Sharma",
     "",
-    "> Performance marketer and growth strategist with 9+ years in paid media, more than $1.5M in managed ad spend, and a mechatronics engineering background. Based in Sri Lanka, working remotely.",
+    "> Senior full-stack digital marketer and demand generation specialist with 9+ years in paid media, more than $1.5M in managed ad spend, and a mechatronics engineering background. Based in Sri Lanka, working remotely.",
     "",
     "## Pages",
     `- [Home](${SITE_URL}/): Overview, key figures, and contact.`,

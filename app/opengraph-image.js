@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Vathsan Sharma · Performance marketer and growth strategist";
+export const alt = "Vathsan Sharma · Senior full-stack digital marketer and demand generation specialist";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -22,7 +22,7 @@ export default function OpengraphImage() {
         }}
       >
         <div style={{ fontSize: 26, color: "#86868b", letterSpacing: 2, textTransform: "uppercase" }}>
-          Performance marketing · Growth
+          Full-stack digital marketing · Demand generation
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 92, fontWeight: 600, lineHeight: 1, letterSpacing: -2 }}>
