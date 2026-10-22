@@ -7,9 +7,9 @@ import { pageMetadata } from "../../../lib/seo";
 import { breadcrumbSchema } from "../../../lib/schema";
 
 const sections = [
-  { key: "challenge", title: "The challenge", pending: "[Challenge: pending confirmation]" },
-  { key: "approach", title: "The approach", pending: "[Approach: pending confirmation]" },
-  { key: "results", title: "The results", pending: "[Results: pending confirmation]" },
+  { key: "challenge", title: "The challenge" },
+  { key: "approach", title: "The approach" },
+  { key: "results", title: "The results" },
 ];
 
 export function generateStaticParams() {
@@ -41,16 +41,14 @@ export default function CasePage({ params }) {
       />
       <PageHead eyebrow="Case study" title={item.name} lead={item.summary} />
       <section className="prose" aria-label="Case study details">
-        {sections.map((s) => (
-          <div className="case-section" key={s.key}>
-            <h2>{s.title}</h2>
-            {item[s.key] ? (
+        {sections
+          .filter((s) => item[s.key])
+          .map((s) => (
+            <div className="case-section" key={s.key}>
+              <h2>{s.title}</h2>
               <p>{item[s.key]}</p>
-            ) : (
-              <p className="placeholder">{s.pending}</p>
-            )}
-          </div>
-        ))}
+            </div>
+          ))}
       </section>
     </PageShell>
   );

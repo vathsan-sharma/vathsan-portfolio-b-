@@ -32,7 +32,7 @@ export default function BlogPage() {
       />
       <section className="prose" aria-label="Posts">
         {posts.length === 0 ? (
-          <p className="placeholder">[Posts coming soon.]</p>
+          <p className="placeholder">Posts coming soon.</p>
         ) : (
           <ul className="post-list">
             {posts.map((post) => (

@@ -14,7 +14,6 @@ export default function StoryChapters() {
           </>
         }
         body="I taught line-following robots, programmed robotic arms, and designed a mechanical funnel that caught newspapers falling mid-run at a printing plant. My final-year drone detects crop disease, and an eye-blink device helped partially paralysed users send messages."
-        slot="[Photo: robot or drone]"
       />
 
       <Chapter

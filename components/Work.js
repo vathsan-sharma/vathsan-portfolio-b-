@@ -16,12 +16,6 @@ export default function Work() {
           </article>
         ))}
       </div>
-      <p className="fine">
-        <span className="placeholder">
-          Also: courier logistics, premium restaurant, student visa consultancy, ZipDJ. [Confirm client
-          permission]
-        </span>
-      </p>
     </section>
   );
 }

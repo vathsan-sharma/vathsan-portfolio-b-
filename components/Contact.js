@@ -6,16 +6,13 @@ export default function Contact() {
       </h2>
       <div className="ctas">
         <a className="pill pill-dark" href="#contact">
-          Book a call <span className="placeholder">[link]</span>
+          Book a call
         </a>
         <span className="pill pill-outline">vathsansharma@gmail.com</span>
       </div>
       <p className="cap contact-meta">linkedin.com/in/vathsan-sharma · Sri Lanka (Remote)</p>
       <footer className="footer">
         <span>© Vathsan Sharma</span>
-        <span>
-          Phone number hidden
-        </span>
       </footer>
     </section>
   );
