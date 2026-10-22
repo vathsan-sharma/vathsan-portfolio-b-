@@ -806,3 +806,41 @@ a:focus-visible {
 .tool-row li:hover img {
   transform: translateY(-2px);
 }
+
+/* Client logos: greyscale grid, colour on hover */
+.clients {
+  margin-top: 56px;
+}
+.client-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  justify-items: center;
+  gap: 28px 24px;
+  max-width: 760px;
+  list-style: none;
+  margin: 24px auto 0;
+  padding: 0;
+}
+.client-grid img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 150px;
+  max-height: 64px;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition:
+    filter 0.3s ease,
+    opacity 0.3s ease;
+}
+.client-grid li:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+@media (min-width: 720px) {
+  .client-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
