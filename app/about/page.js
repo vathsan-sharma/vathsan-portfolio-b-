@@ -28,6 +28,11 @@ export default function AboutPage() {
         lead="A mechatronics engineer who moved into performance marketing, then into teaching it."
       />
       <StoryChapters />
+      <p className="section-wrap" style={{ textAlign: "center" }}>
+        <a className="pill pill-line" href="/journey">
+          See the full journey ›
+        </a>
+      </p>
       <Credentials />
     </PageShell>
   );

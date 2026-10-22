@@ -13,6 +13,7 @@ export function GET() {
     "## Pages",
     `- [Home](${SITE_URL}/): Overview, key figures, and contact.`,
     `- [About](${SITE_URL}/about): Engineering background, the move into paid media, and credentials.`,
+    `- [Journey](${SITE_URL}/journey): Engineering projects, the move into paid media, and teaching, in order.`,
     `- [Work](${SITE_URL}/work): Selected performance marketing case studies.`,
     `- [Teaching](${SITE_URL}/teaching): Certified training, conference panels, and visiting lectures.`,
     `- [FAQ](${SITE_URL}/faq): Short answers about experience, training, and contact.`,
