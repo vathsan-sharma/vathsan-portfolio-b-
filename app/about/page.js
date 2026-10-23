@@ -34,6 +34,9 @@ export default function AboutPage() {
         <a className="pill pill-line" href="/gallery">
           See the photos ›
         </a>
+        <a className="pill pill-line" href="/blog">
+          Read the blog ›
+        </a>
       </p>
       <Credentials />
     </PageShell>

@@ -28,7 +28,7 @@ export default function GalleryPage() {
         lead="Speaking, panels, training and events from the journey."
       />
       <section className="gallery-grid" aria-label="Photo gallery">
-        {moments.map((photo) => (
+        {moments.map((photo, i) => (
           <figure className="gallery-item" key={photo.src}>
             <Image
               src={photo.src}
@@ -36,6 +36,7 @@ export default function GalleryPage() {
               width={960}
               height={1200}
               sizes="(max-width: 720px) 50vw, 300px"
+              priority={i < 4}
             />
           </figure>
         ))}
