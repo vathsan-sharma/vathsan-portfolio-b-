@@ -1,6 +1,7 @@
 import PageShell from "../../components/PageShell";
 import PageHead from "../../components/PageHead";
 import StoryChapters from "../../components/StoryChapters";
+import JourneyTimeline from "../../components/JourneyTimeline";
 import Credentials from "../../components/Credentials";
 import JsonLd from "../../components/JsonLd";
 import { pageMetadata } from "../../lib/seo";
@@ -28,10 +29,8 @@ export default function AboutPage() {
         lead="A mechatronics engineer who moved into performance marketing, then into teaching it."
       />
       <StoryChapters />
+      <JourneyTimeline />
       <p className="section-wrap" style={{ textAlign: "center" }}>
-        <a className="pill pill-line" href="/journey">
-          See the full journey ›
-        </a>
         <a className="pill pill-line" href="/gallery">
           See the photos ›
         </a>
