@@ -12,11 +12,9 @@ export default function Research() {
       <div className="cases">
         {latest.map((paper) => (
           <article className="case" key={paper.slug}>
-            <p className="cap">
-              {paper.venue} · {paper.year}
-            </p>
+            <p className="cap">{paper.venue}</p>
             <h3>
-              <Link href={`/research#${paper.slug}`}>{paper.title}</Link>
+              <Link href={`/research/${paper.slug}`}>{paper.title}</Link>
             </h3>
           </article>
         ))}

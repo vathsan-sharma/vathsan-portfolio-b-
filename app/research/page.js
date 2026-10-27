@@ -1,9 +1,10 @@
+import Link from "next/link";
 import PageShell from "../../components/PageShell";
 import PageHead from "../../components/PageHead";
 import JsonLd from "../../components/JsonLd";
 import { papers } from "../../lib/papers";
 import { pageMetadata } from "../../lib/seo";
-import { breadcrumbSchema, paperSchema } from "../../lib/schema";
+import { breadcrumbSchema } from "../../lib/schema";
 
 // Stay out of search until there is something to index, like the blog does.
 export const metadata = {
@@ -25,9 +26,6 @@ export default function ResearchPage() {
           { name: "Research", path: "/research" },
         ])}
       />
-      {papers.map((paper) => (
-        <JsonLd key={paper.slug} data={paperSchema(paper)} />
-      ))}
       <PageHead
         eyebrow="Research"
         title="Research and papers."
@@ -40,19 +38,13 @@ export default function ResearchPage() {
           <div className="cases">
             {papers.map((paper) => (
               <article className="case" key={paper.slug}>
-                <p className="cap">
-                  {paper.venue} · {paper.year}
-                </p>
-                <h2 className="paper-title">{paper.title}</h2>
+                <p className="cap">{paper.venue}</p>
+                <h2 className="paper-title">
+                  <Link href={`/research/${paper.slug}`}>{paper.title}</Link>
+                </h2>
                 <p>{paper.summary}</p>
-                {paper.coauthors && <p className="cap">With {paper.coauthors.join(", ")}</p>}
                 <p className="paper-links">
-                  {paper.pdf && <a href={paper.pdf}>Read PDF</a>}
-                  {paper.url && (
-                    <a href={paper.url} target="_blank" rel="noopener noreferrer">
-                      View publisher page
-                    </a>
-                  )}
+                  <Link href={`/research/${paper.slug}`}>Read the paper</Link>
                 </p>
               </article>
             ))}
