@@ -506,6 +506,24 @@ a {
   font-weight: 500;
 }
 
+/* Research list groups */
+.paper-group {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: left;
+}
+.paper-group-title {
+  font-size: 22px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  margin: 0 0 6px;
+}
+.paper-group-desc {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
 /* Research list: each row is one link to the paper's page */
 .paper-list {
   list-style: none;

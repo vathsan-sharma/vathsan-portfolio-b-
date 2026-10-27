@@ -2,7 +2,7 @@ import Link from "next/link";
 import PageShell from "../../components/PageShell";
 import PageHead from "../../components/PageHead";
 import JsonLd from "../../components/JsonLd";
-import { papers } from "../../lib/papers";
+import { papers, categories } from "../../lib/papers";
 import { pageMetadata } from "../../lib/seo";
 import { breadcrumbSchema } from "../../lib/schema";
 
@@ -35,17 +35,29 @@ export default function ResearchPage() {
         {papers.length === 0 ? (
           <p className="body">Papers will be listed here.</p>
         ) : (
-          <ul className="paper-list">
-            {papers.map((paper) => (
-              <li key={paper.slug}>
-                <Link className="paper-row" href={`/research/${paper.slug}`}>
-                  <span className="paper-venue">{paper.venue}</span>
-                  <span className="paper-row-title">{paper.title}</span>
-                  <span className="paper-arrow" aria-hidden="true">›</span>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          categories.map((group) => {
+            const items = papers.filter((paper) => paper.category === group.id);
+            if (items.length === 0) return null;
+            return (
+              <section key={group.id} className="paper-group" aria-labelledby={`group-${group.id}`}>
+                <h2 id={`group-${group.id}`} className="paper-group-title">
+                  {group.name}
+                </h2>
+                <p className="paper-group-desc">{group.description}</p>
+                <ul className="paper-list">
+                  {items.map((paper) => (
+                    <li key={paper.slug}>
+                      <Link className="paper-row" href={`/research/${paper.slug}`}>
+                        <span className="paper-venue">{paper.venue}</span>
+                        <span className="paper-row-title">{paper.title}</span>
+                        <span className="paper-arrow" aria-hidden="true">›</span>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            );
+          })
         )}
       </section>
     </PageShell>
