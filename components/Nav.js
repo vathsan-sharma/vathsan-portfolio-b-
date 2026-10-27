@@ -15,6 +15,9 @@ export default function Nav() {
           <a href="/teaching">Teaching</a>
         </li>
         <li>
+          <a href="/research">Research</a>
+        </li>
+        <li>
           <a href="/faq">FAQ</a>
         </li>
       </ul>
