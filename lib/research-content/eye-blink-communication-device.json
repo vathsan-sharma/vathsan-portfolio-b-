@@ -1,0 +1,198 @@
+[
+ {
+  "type": "h2",
+  "text": "Status of This Document"
+ },
+ {
+  "type": "p",
+  "text": "This is a draft research paper for a prototype built for the Yarl Geek Challenge, where the project reached the finalist stage. The device was evaluated with healthy volunteers only. Testing with partially paralysed users has not been carried out. Results marked [TO FILL] must be taken from the test records before submission. Claims about use by paralysed people are design intentions, not findings."
+ },
+ {
+  "type": "h2",
+  "text": "Abstract"
+ },
+ {
+  "type": "p",
+  "text": "Partially paralysed people often depend on caregivers to request basic needs, and many needs arise between scheduled care times. Scheduled routines such as meals and medication cover predictable needs, but they do not support unscheduled requests, such as a drink at 9 a.m. This paper describes an infrared eye-blink communication device that maps blink patterns to pre-defined messages, so that a user with limited voluntary movement can signal a request at any time. The device uses an infrared emitter and receiver aimed at the eye, a microcontroller that counts and times blinks, and a fixed mapping from blink sequences to messages. The paper presents the sensing principle, the decoding scheme, and a preliminary evaluation with [TO FILL: number] healthy volunteers. The evaluation measures per-code detection accuracy, false triggers, and decoding latency. The results are preliminary. They establish that the signalling principle works under controlled conditions and identify the work needed before any clinical use."
+ },
+ {
+  "type": "h2",
+  "text": "1. Introduction"
+ },
+ {
+  "type": "p",
+  "text": "Care for partially paralysed people is usually organised around fixed times. Meals, drinks, medication and toileting happen on a schedule set by carers. This works for predictable needs but leaves a gap. A person who wants water at 9 a.m. must wait for the next scheduled round, or must attract a carer’s attention by means that may be unavailable to them."
+ },
+ {
+  "type": "p",
+  "text": "Eye movements and blinks are among the few voluntary movements that remain for many people with limited motor function. Eye-tracking systems are effective but expensive, and many require calibration and specialised hardware. A simpler approach is to detect deliberate blinks with a low-cost sensor and to map blink patterns to messages. The design goal is a device that is cheap to build, easy to use, and able to send a small set of clear requests at any time."
+ },
+ {
+  "type": "p",
+  "text": "This paper makes three contributions. It describes a working prototype built from low-cost components. It defines a blink-to-message decoding scheme suitable for a small vocabulary of needs. And it reports a preliminary evaluation of accuracy and latency with healthy volunteers, with clear limits on what that evaluation can show."
+ },
+ {
+  "type": "h2",
+  "text": "2. Related Work"
+ },
+ {
+  "type": "p",
+  "text": "Assistive communication systems range from picture boards and switch-based devices to eye-tracking interfaces and brain-computer interfaces. Eye-tracking systems offer rich input but depend on specialised cameras and calibration. Switch-based systems are robust but often require a hand or head movement that some users cannot make. Blink-based interfaces occupy a middle ground: they need only a small sensor and a deliberate movement that many users retain."
+ },
+ {
+  "type": "p",
+  "text": "Prior work on blink detection has used cameras, electrooculography and optical sensors. Camera-based systems are sensitive to lighting and need significant processing. Electrooculography requires skin electrodes, which some users find uncomfortable. Optical sensors, including infrared reflectance sensors, are cheap and simple, but are sensitive to ambient light and to the position of the sensor relative to the eye. This paper uses an optical approach and tests its limits. [TO FILL: add two or three references to published blink-detection or assistive-communication systems, verified before submission.]"
+ },
+ {
+  "type": "h2",
+  "text": "3. System Design"
+ },
+ {
+  "type": "h3",
+  "text": "3.1 Sensing Principle"
+ },
+ {
+  "type": "p",
+  "text": "An infrared emitter and a photodiode receiver are mounted in a fixed frame facing the eye. When the eyelid closes, it reflects more of the emitted infrared light back to the receiver, and the received signal rises. When the eye is open, the signal falls. The microcontroller thresholds the signal, using a baseline that is recalculated during a calibration period at start-up."
+ },
+ {
+  "type": "p",
+  "text": "[TO FILL: confirm the emitter and receiver model, the microcontroller board, the sampling rate, and whether the right and left eye were distinguished by one sensor or two.]"
+ },
+ {
+  "type": "h3",
+  "text": "3.2 Blink Detection"
+ },
+ {
+  "type": "p",
+  "text": "A blink is recognised when the signal exceeds the threshold for longer than a minimum duration, and returns below it. The minimum and maximum durations filter out involuntary blinks that are short and fast, and long closures such as sustained eye closure. The thresholds were set by [TO FILL: describe how they were chosen, for example on pilot data]."
+ },
+ {
+  "type": "h3",
+  "text": "3.3 Decoding Scheme"
+ },
+ {
+  "type": "p",
+  "text": "Blinks are grouped into sequences. A sequence ends when no further blink is detected within a fixed window. The number of blinks in the sequence determines the message. The vocabulary used in testing was:"
+ },
+ {
+  "type": "p",
+  "text": "One blink: “I want water.”"
+ },
+ {
+  "type": "p",
+  "text": "Two blinks: “I want food.”"
+ },
+ {
+  "type": "p",
+  "text": "Three blinks with the right eye: “I need to go out.”"
+ },
+ {
+  "type": "p",
+  "text": "[TO FILL: confirm the full vocabulary, and state how a right-eye blink was distinguished from a left-eye blink. The decoding of eye side is the least certain part of the scheme and must be described precisely.]"
+ },
+ {
+  "type": "p",
+  "text": "The mapping is fixed and small by design. A larger vocabulary increases the number of patterns a user must remember and the chance of mis-decoding. The scheme is intended for a vocabulary of a few clear needs, which carers can learn quickly."
+ },
+ {
+  "type": "h3",
+  "text": "3.4 Output"
+ },
+ {
+  "type": "p",
+  "text": "Each decoded message is shown on a display and played as an audio prompt. [TO FILL: confirm the output hardware and whether a carer notification or log was implemented.]"
+ },
+ {
+  "type": "h2",
+  "text": "4. Evaluation Method"
+ },
+ {
+  "type": "h3",
+  "text": "4.1 Participants"
+ },
+ {
+  "type": "p",
+  "text": "[TO FILL: number of healthy volunteers, age range, and how they were recruited.] The evaluation used healthy volunteers only, because the device was tested for sensing reliability before any work with the intended users. No participants had paralysis."
+ },
+ {
+  "type": "h3",
+  "text": "4.2 Procedure"
+ },
+ {
+  "type": "p",
+  "text": "Each volunteer sat at a fixed distance from the sensor and was asked to produce each target blink sequence a set number of times: [TO FILL: number of trials per code]. Sequences were presented in random order. Volunteers were not told the expected message until after each trial, so that they could not adjust their timing to the decoder."
+ },
+ {
+  "type": "p",
+  "text": "Trials were run under [TO FILL: lighting conditions, for example indoor artificial light and daylight, both tested or one only]."
+ },
+ {
+  "type": "h3",
+  "text": "4.3 Measures"
+ },
+ {
+  "type": "p",
+  "text": "The study measures four things. Per-code accuracy is the proportion of intended sequences decoded correctly. False triggers are decoded messages produced when no sequence was intended, measured during rest periods. Decoding latency is the time from the final blink to the message being displayed. And usability, if measured, is the volunteer’s rating of how easy the blinks were to produce, on a [TO FILL: scale]."
+ },
+ {
+  "type": "h3",
+  "text": "4.4 Ethics"
+ },
+ {
+  "type": "p",
+  "text": "The testing was approved informally by the supervising staff member and the competition organisers. No formal ethics approval reference exists. Volunteers gave verbal consent [TO FILL: confirm]. This paper reports the work as a prototype study with healthy volunteers. Any future testing with paralysed users requires formal ethics approval and a clinical or caregiver protocol before it begins."
+ },
+ {
+  "type": "h2",
+  "text": "5. Results"
+ },
+ {
+  "type": "p",
+  "text": "[TO FILL: report per-code accuracy with the number of trials and a 95 percent confidence interval for each code. Report false triggers per hour of rest. Report median and range of decoding latency. Include a table of results by volunteer if the sample is small enough to show individual performance.]"
+ },
+ {
+  "type": "p",
+  "text": "Results should be reported exactly as recorded. If any code performed poorly, say so and state the likely cause, such as eyelid closure that was too slow, or a confusion between the left and right eye."
+ },
+ {
+  "type": "h2",
+  "text": "6. Discussion"
+ },
+ {
+  "type": "p",
+  "text": "The results should be read as evidence that the signalling principle works under controlled conditions with healthy volunteers. They do not show that a partially paralysed user can produce the same blinks reliably, or that the decoder will perform in a home or care setting. Those are separate questions and need separate testing."
+ },
+ {
+  "type": "p",
+  "text": "The main practical question for users is whether the decoding scheme can be learned quickly and used without frustration. A small vocabulary and a fixed mapping help. A carer who reads the mapping aloud and practises with the user is likely to improve reliability, but this has not been tested."
+ },
+ {
+  "type": "p",
+  "text": "The device also has design limitations. Infrared sensing is sensitive to ambient light, to sensor position, and to glasses or eye conditions that affect reflectance. These effects have not been fully characterised."
+ },
+ {
+  "type": "h2",
+  "text": "7. Limitations"
+ },
+ {
+  "type": "p",
+  "text": "The study used healthy volunteers and a small sample [TO FILL: n]. It was conducted in a controlled setting over a short period. The approval was informal, and no clinical or caregiver protocol was in place. The vocabulary was small and fixed. Long-term reliability, fatigue effects and the behaviour of the device in daily use were not tested. The results cannot be generalised to people with partial paralysis, and no claim of clinical benefit is made."
+ },
+ {
+  "type": "h2",
+  "text": "8. Conclusion"
+ },
+ {
+  "type": "p",
+  "text": "The paper describes a low-cost infrared device that decodes blink patterns into a small set of messages, and reports a preliminary evaluation with healthy volunteers. The principle works under controlled conditions, and the decoding scheme is simple enough to be learned. The next step is formal ethics approval and testing with partially paralysed users, measured against the same accuracy, latency and usability criteria, with carers involved in the protocol."
+ },
+ {
+  "type": "h2",
+  "text": "References (To Be Verified)"
+ },
+ {
+  "type": "p",
+  "text": "[TO FILL: add verified references on assistive communication, blink detection, and infrared reflectance sensing. Do not submit without checking each one against its original source, since web search was unavailable when this draft was written.]"
+ }
+]
