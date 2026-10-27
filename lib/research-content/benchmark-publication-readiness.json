@@ -1,0 +1,158 @@
+[
+ {
+  "type": "h2",
+  "text": "Abstract"
+ },
+ {
+  "type": "p",
+  "text": "Benchmarks shape how the AI field measures progress, yet many are released with claims that outrun their evidence. A leaderboard score without a confidence interval, a test set with unexamined overlap with training data, or a methodology section that omits the grading rubric can each mislead researchers, buyers and the press. This paper proposes a publication-readiness framework that links every headline claim to the evidence needed to defend it. The framework has five checks: claim scope, construct validity, statistical reporting, contamination and reproducibility. We describe how each check works, what failure looks like, and how a non-specialist reviewer can run the checks alongside the research team. We illustrate the framework with anonymised examples from a multi-stage review process in a performance-marketing environment, where the same discipline of claim-to-evidence tracing was applied to client reporting. The paper is written for research marketers, benchmark maintainers and technical leads who must decide whether a result is ready to launch."
+ },
+ {
+  "type": "h2",
+  "text": "1. Introduction"
+ },
+ {
+  "type": "p",
+  "text": "A benchmark release is a claim about the world. “Model A outperforms Model B on legal reasoning” is a claim about legal reasoning, not about the 500 questions in a file. The gap between those two statements is where most benchmark credibility is lost. Researchers rarely overstate deliberately. The gap usually appears because launch timelines compress review, because the people writing the announcement were not in the room when the methodology was decided, and because nobody owns the question of whether the evidence is strong enough for the claim being made."
+ },
+ {
+  "type": "p",
+  "text": "This paper treats that gap as an operational problem. It describes a publication-readiness bar that a research marketing function can own without needing to reproduce every experiment. The goal is not to replace peer review. Peer review, where it exists, checks novelty and method. The framework here checks something adjacent: whether the public-facing story, including headline numbers, comparisons and scope statements, is supported by what the work actually shows."
+ },
+ {
+  "type": "h2",
+  "text": "2. The Problem With Headline Numbers"
+ },
+ {
+  "type": "p",
+  "text": "Single aggregate scores are attractive because they are easy to compare and easy to repeat. They are also fragile. An aggregate can hide a small number of items that drive most of the difference between systems, a grading rubric that rewards formatting over reasoning, or a split of tasks that favours one family of models. Three failure patterns recur often enough to be worth naming."
+ },
+ {
+  "type": "p",
+  "text": "The first is the unqualified ranking. A table places models in order to one decimal place, but the gap between first and third is smaller than the variation one would expect from resampling the same questions. Without intervals or significance tests, readers cannot distinguish a real difference from noise."
+ },
+ {
+  "type": "p",
+  "text": "The second is scope drift. A benchmark built from a few hundred questions written by a small group is presented as a measure of “medical knowledge” or “financial reasoning.” The title promises more than the construct covers."
+ },
+ {
+  "type": "p",
+  "text": "The third is evidence that arrives after the claim. Contamination checks, annotator agreement and prompt sensitivity analyses are often completed late, or not at all, because they were not part of the release plan."
+ },
+ {
+  "type": "h2",
+  "text": "3. The Five-Part Readiness Framework"
+ },
+ {
+  "type": "p",
+  "text": "The framework treats each public claim as a row in a register. For each row, the team records the claim, the evidence, the check that tests the evidence, and the decision: publish as stated, publish with narrower wording, or hold."
+ },
+ {
+  "type": "h3",
+  "text": "3.1 Claim Scope"
+ },
+ {
+  "type": "p",
+  "text": "The first check asks whether the wording of each claim matches the population the data supports. A useful test is to write the claim as “On the N items in set X, graded by rubric Y, system Z scored S.” If that sentence reads awkwardly, the headline is probably too broad. Scope checks also cover the language and jurisdiction of the content. A legal benchmark built only on US common-law questions should say so in the headline, not only in the appendix."
+ },
+ {
+  "type": "h3",
+  "text": "3.2 Construct Validity"
+ },
+ {
+  "type": "p",
+  "text": "The second check asks whether the task measures the capability it names. Reviewers should look for items that can be answered by pattern matching or by exploiting answer-format cues, and for grading that rewards surface features such as length or confident tone. Where possible, the team should include a small set of items that a domain expert considers hard, and report performance on that subset separately. A benchmark that cannot distinguish a novice from an expert on its own content has a construct problem, whatever its aggregate score."
+ },
+ {
+  "type": "h3",
+  "text": "3.3 Statistical Reporting"
+ },
+ {
+  "type": "p",
+  "text": "The third check requires uncertainty to be reported with every comparison. Bootstrapped confidence intervals over items are a practical default, and paired tests are appropriate when two systems are evaluated on identical items. The check should also cover sample size. For a set of a few hundred items, differences of a few percentage points between systems are often inside the noise. The readiness standard is simple: no ranking is published without an interval, and no difference is described as meaningful unless the interval excludes zero or the team explains why another test is appropriate."
+ },
+ {
+  "type": "p",
+  "text": "Reviewers should also check for run-to-run variance. If a result depends on a single sampling seed or a single prompt template, the report should say so, and preferably show a range across several reasonable prompt variants."
+ },
+ {
+  "type": "h3",
+  "text": "3.4 Contamination"
+ },
+ {
+  "type": "p",
+  "text": "The fourth check asks whether the test items, or close paraphrases of them, appear in data a model could have trained on. Standard approaches include n-gram overlap against known corpora, canary strings where the benchmark is published with a unique marker, and temporal splits where items were written after a model’s training cut-off. None of these is conclusive alone. The readiness standard is to state which checks were run, what they found, and what residual risk remains. A benchmark released with no contamination statement is not ready for a claim of novelty."
+ },
+ {
+  "type": "h3",
+  "text": "3.5 Reproducibility"
+ },
+ {
+  "type": "p",
+  "text": "The fifth check asks whether an outside team could reproduce the headline number. The minimum artefacts are the dataset or a clear access route, the grading procedure including any rubric or judge prompt, the exact model versions and inference settings, and the code used to compute the reported statistics. Checklists used by major machine learning venues, including the reproducibility checklist popularised by Pineau and colleagues, provide a useful template. The research marketing role adds one requirement: the public materials must link to these artefacts, not merely describe them."
+ },
+ {
+  "type": "h2",
+  "text": "4. Running the Framework Without Being the Researcher"
+ },
+ {
+  "type": "p",
+  "text": "A research marketing lead does not need to design the experiments. The role is to ask the questions that make the research team’s answers visible to the public. In practice, this means a short review meeting before launch, a shared claim register, and a rule that any claim without a linked piece of evidence is either narrowed or removed."
+ },
+ {
+  "type": "p",
+  "text": "The review should separate three types of findings. Blocking findings stop the release until fixed, for example a headline ranking with no uncertainty or a contamination risk the team has not assessed. Wording findings change the language but not the result, for example replacing “understands law” with “answers multiple-choice questions drawn from bar-style examinations.” Hygiene findings improve the package without affecting the claim, for example adding a data card or a clearer README."
+ },
+ {
+  "type": "p",
+  "text": "Keeping the categories distinct matters. When everything is treated as blocking, teams start to ignore the process. When everything is treated as hygiene, nothing is ever held."
+ },
+ {
+  "type": "h2",
+  "text": "5. Anonymised Illustration"
+ },
+ {
+  "type": "p",
+  "text": "In a previous performance-marketing role, the author ran a weekly reporting cycle in which every headline metric in a client deck had to trace back to a platform export, a stated date range and a stated attribution window. Early versions of the reports contained comparisons that looked decisive but used different windows or different conversion definitions on each side. The fix was procedural rather than technical: a claim register, a rule that comparisons must share definitions, and a reviewer who checked each headline against its source before the deck was sent."
+ },
+ {
+  "type": "p",
+  "text": "The parallel to benchmark launches is direct. In both settings the failure was not dishonesty but the absence of a gate between the analysis and the message. [TO FILL: one or two sentences on the scale of the reporting cycle, e.g. number of accounts or reports per cycle, with approval for disclosure.] [TO FILL: one specific example of a claim that was narrowed or held during review, with identifying details removed.]"
+ },
+ {
+  "type": "h2",
+  "text": "6. Limitations"
+ },
+ {
+  "type": "p",
+  "text": "The framework does not prove that a benchmark is valid. It is a set of tests that reduce the chance of publishing claims the evidence cannot carry. Some checks, particularly construct validity, require domain judgement that a marketing reviewer must borrow from experts. The framework also adds time to release schedules. The authors’ view is that the time is small compared with the cost of retracting or correcting a launch that was widely shared."
+ },
+ {
+  "type": "h2",
+  "text": "7. Conclusion"
+ },
+ {
+  "type": "p",
+  "text": "Benchmark credibility is built one claim at a time. A publication-readiness bar that links each headline to its evidence, checks scope, validity, uncertainty, contamination and reproducibility, and gives the research team a clear decision at the end is a practical way to keep public claims honest. It is also a useful bridge between researchers, who know what the evidence shows, and the wider ecosystem, which must decide what to trust."
+ },
+ {
+  "type": "h2",
+  "text": "References"
+ },
+ {
+  "type": "p",
+  "text": "Miller, E. (2024). Adding error bars to evals: A statistical approach to language model evaluations. arXiv preprint. [Verify citation before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Pineau, J., Vincent-Lamarre, P., Sinha, K., Larivière, V., Beygelzimer, A., d’Alché-Buc, F., Fox, E., and Larochelle, H. (2021). Improving reproducibility in machine learning research. Journal of Machine Learning Research, 22. [Verify citation before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Dodge, J., Gururangan, S., Card, D., Schwartz, R., and Smith, N. A. (2019). Show your work: Improved reporting of experimental results. Proceedings of EMNLP. [Verify citation before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J. W., Wallach, H., Daumé III, H., and Crawford, K. (2018). Datasheets for datasets. arXiv preprint. [Verify citation before publication.]"
+ }
+]

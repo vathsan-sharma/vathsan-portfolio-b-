@@ -1,0 +1,170 @@
+[
+ {
+  "type": "h2",
+  "text": "Abstract"
+ },
+ {
+  "type": "p",
+  "text": "Business buyers increasingly begin their research with AI answer engines rather than search results pages or vendor websites. When a buyer asks a model to compare suppliers, the model synthesises sources, selects a few brands to name, and often answers without a click. This paper examines what that shift means for B2B content strategy and for the measurement systems marketers rely on. It argues that three things change: the unit of competition moves from ranking to inclusion, the value of content shifts toward being cited and summarised accurately, and attribution models built around clicks lose visibility into a growing share of the buyer’s research. The paper reviews the emerging literature on generative engine optimisation, sets out a framework for auditing AI-mediated visibility, and proposes a measurement approach that combines citation sampling, branded search trends, direct traffic and self-reported attribution. The empirical component, a sampled audit of AI answers for a defined set of buying queries, is specified but not yet run. Claims about the size of the shift are presented as hypotheses, not findings."
+ },
+ {
+  "type": "h2",
+  "text": "1. Introduction"
+ },
+ {
+  "type": "p",
+  "text": "For two decades, B2B demand generation has been organised around a sequence in which buyers search, click, read and convert. Content was designed to rank, to attract a click, and to capture a lead. Attribution models were built to credit the touchpoints in that sequence."
+ },
+ {
+  "type": "p",
+  "text": "AI answer engines compress the sequence. A buyer asking which software vendors serve a particular compliance requirement receives a synthesised answer that may name three or four companies, describe their strengths, and suggest a shortlist, all without a visit to any of them. The buyer may then search the brand name directly, visit the site days later, or arrive through a referral that the analytics platform records as direct traffic. The research has happened, but the measurement system does not show it."
+ },
+ {
+  "type": "p",
+  "text": "The question for marketers is practical. What content makes a brand more likely to be included in these answers, and how should performance be measured when the click is no longer the main evidence of interest?"
+ },
+ {
+  "type": "h2",
+  "text": "2. Background and Terminology"
+ },
+ {
+  "type": "p",
+  "text": "The term generative engine optimisation was introduced in academic work that proposed methods for increasing the visibility of content in model-generated responses, and that tested the effect of different content strategies on visibility metrics (Aggarwal et al., 2024; to be verified). The practitioner literature uses related terms, including answer engine optimisation and AI search visibility. The terms are not yet standardised, and this paper uses “AI-mediated visibility” to mean the presence, position and accuracy of a brand in model-generated answers to buying-related queries."
+ },
+ {
+  "type": "p",
+  "text": "Three properties of model answers matter for content strategy. The first is inclusion: whether the brand is named at all. The second is characterisation: how the brand is described, including whether the description is accurate and current. The third is citation: whether the answer links to a source the buyer can follow. Each property depends on different content signals, and each can be measured in a different way."
+ },
+ {
+  "type": "h2",
+  "text": "3. Research Questions and Hypotheses"
+ },
+ {
+  "type": "p",
+  "text": "RQ1. For a defined set of B2B buying queries, how often do AI answer engines include a given brand, and how does inclusion vary by query type and by engine?"
+ },
+ {
+  "type": "p",
+  "text": "H1. Inclusion is concentrated: a small number of brands are named across many queries, and category leaders account for a disproportionate share of mentions."
+ },
+ {
+  "type": "p",
+  "text": "RQ2. Which content characteristics are associated with inclusion and accurate characterisation?"
+ },
+ {
+  "type": "p",
+  "text": "H2. Inclusion is associated with third-party corroboration (reviews, analyst mentions, independent case studies) more strongly than with the brand’s own content volume, because models rely on sources they treat as independent."
+ },
+ {
+  "type": "p",
+  "text": "RQ3. How much of the buyer’s research journey is invisible to click-based attribution, and how can that be estimated?"
+ },
+ {
+  "type": "p",
+  "text": "H3. A material share of branded and direct traffic in B2B accounts follows an AI-mediated research step, which can be estimated through a combination of self-reported attribution and branded search trends, but not precisely from click data alone."
+ },
+ {
+  "type": "h2",
+  "text": "4. Proposed Method"
+ },
+ {
+  "type": "h3",
+  "text": "4.1 Query Set"
+ },
+ {
+  "type": "p",
+  "text": "The study defines a set of buying queries for a single category, sampled from the kinds of questions buyers ask at each stage: problem framing, category exploration, vendor comparison and shortlisting. The query set should be written in the language of the buyer rather than the vendor, and should be fixed before the audit begins. Queries are grouped by stage so that inclusion can be compared across the journey."
+ },
+ {
+  "type": "h3",
+  "text": "4.2 Answer Sampling"
+ },
+ {
+  "type": "p",
+  "text": "Each query is run across the engines the audience uses, at defined times, in a fresh session without personalisation where the platform allows it. Each answer is recorded in full, together with the date, the engine, the model version where shown, and any cited sources. Because answers vary between runs, each query should be sampled several times, and inclusion reported as a proportion with a confidence interval rather than as a single observed answer."
+ },
+ {
+  "type": "h3",
+  "text": "4.3 Coding"
+ },
+ {
+  "type": "p",
+  "text": "Each answer is coded on three properties: whether each brand is named, how it is characterised (positive, neutral, negative, or inaccurate, with the inaccuracy noted), and whether a source is cited for the characterisation. Two coders code a subsample independently, and agreement is measured with Cohen’s kappa. Disagreements are resolved by discussion."
+ },
+ {
+  "type": "h3",
+  "text": "4.4 Source Analysis"
+ },
+ {
+  "type": "p",
+  "text": "For each cited source, the study records its type (vendor’s own site, review platform, publication, analyst, forum, other) and whether it is independent of the brand. This allows H2 to be tested by comparing inclusion for brands with and without independent corroboration in their cited sources, controlling for category."
+ },
+ {
+  "type": "h3",
+  "text": "4.5 Measurement Triangulation"
+ },
+ {
+  "type": "p",
+  "text": "To address RQ3, the study combines four signals. Self-reported attribution, through a form field asking how the buyer first heard of the company, captures some AI-mediated research that analytics cannot see, but is subject to recall error and to buyers naming the last source they remember. Branded search volume tracks interest that may follow an AI answer. Direct traffic patterns show spikes that coincide with changes in inclusion. And, where the team has CRM data, the timing between first contact and first site visit can indicate the length of the invisible research phase. The four signals will be compared rather than combined into a single estimate, because each has a different bias."
+ },
+ {
+  "type": "h2",
+  "text": "5. Expected Findings and Their Implications"
+ },
+ {
+  "type": "p",
+  "text": "If H1 holds, the competitive landscape in AI answers will be narrower than in search results, and a brand outside the leading group will need a deliberate strategy to enter the answer set. If H2 holds, the investment case shifts from producing more owned content toward earning independent corroboration, such as reviews, third-party analysis and customer case studies that a model can cite. If H3 holds, attribution reports will understate the contribution of content and of brand-building activity, and the team should adjust how it reports channel performance, stating the proportion of traffic that cannot be attributed and why."
+ },
+ {
+  "type": "p",
+  "text": "These implications are conditional on the results. The study is designed to test them, not to assume them."
+ },
+ {
+  "type": "h2",
+  "text": "6. Anonymised Illustration"
+ },
+ {
+  "type": "p",
+  "text": "In a previous role preparing weekly reports for multiple clients, the author found that the most common source of confusion was not the data itself but the attribution window and the definition of a conversion. Reports that stated both definitions clearly were questioned far less often than reports that assumed the reader shared them. A similar problem arises with AI-mediated visibility, where the team and the client may use “traffic” or “awareness” to mean different things. [TO FILL: one sentence on the reporting scale and the client audience, with approval for disclosure.] [TO FILL: one example of an attribution disagreement between a client and the reporting team, and how it was resolved, with identifying details removed.]"
+ },
+ {
+  "type": "h2",
+  "text": "7. Practical Recommendations"
+ },
+ {
+  "type": "p",
+  "text": "Pending the results, four recommendations follow from the literature and the framework. Teams should run a baseline audit of inclusion for a defined query set and repeat it on a fixed schedule, so that changes can be linked to content or market events. They should invest in third-party corroboration alongside owned content, since independent sources are the more likely basis for a model’s characterisation. They should add a self-reported attribution question to lead forms, and treat its results as directional. And they should state in every report what the attribution model cannot see, rather than presenting click-based figures as the full picture."
+ },
+ {
+  "type": "h2",
+  "text": "8. Limitations"
+ },
+ {
+  "type": "p",
+  "text": "The main limitation is instability. Model answers change with model versions, retrieval sources and personalisation, so a snapshot may not hold for long. The query set reflects a judgement about buyer behaviour that may be wrong for a given market. Engines differ in how they retrieve and cite sources, and results from one engine should not be generalised to others. Self-reported attribution is subject to recall error. And the audit measures what the models say, not what buyers conclude from them. Each limitation should be reported alongside the findings."
+ },
+ {
+  "type": "h2",
+  "text": "9. Conclusion"
+ },
+ {
+  "type": "p",
+  "text": "AI answer engines change the point at which B2B buyers first encounter a brand, and in doing so they change what content must achieve and what measurement must capture. The likely shift is from ranking to inclusion, from owned content to corroborated content, and from click-based attribution to triangulated estimates. The empirical audit proposed here would show how large those shifts are for a given category. Until it is run, the most defensible position is to measure visibility directly and to state clearly what the existing measurement systems cannot show."
+ },
+ {
+  "type": "h2",
+  "text": "References (To Be Verified)"
+ },
+ {
+  "type": "p",
+  "text": "Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., and Deshpande, A. (2024). GEO: Generative engine optimization. Proceedings of the ACM SIGKDD Conference. [Verify citation and findings.]"
+ },
+ {
+  "type": "p",
+  "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement. [Verify citation.]"
+ },
+ {
+  "type": "p",
+  "text": "Note on sourcing: the description of generative engine optimisation in Section 2 should be checked against the published paper, and any industry figures on AI referral traffic must be sourced before use, since web search was unavailable when this draft was written. No such figures are used in this paper."
+ }
+]

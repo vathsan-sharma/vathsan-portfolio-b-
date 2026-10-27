@@ -1,0 +1,307 @@
+[
+ {
+  "type": "h2",
+  "text": "Status of This Document"
+ },
+ {
+  "type": "p",
+  "text": "This is a working paper for an ongoing MBA research project. It is not a finished study. The literature review is partly complete, the research design is specified, and the empirical phase has not yet started. No experimental results are reported here. Every figure that comes from outside sources is second-hand or unverified, and is marked as such. The document is written so that the remaining work can be tracked against it, and so that it can be revised into a publishable paper once the data exists."
+ },
+ {
+  "type": "table",
+  "rows": [
+   [
+    "Component",
+    "Status"
+   ],
+   [
+    "Research question and hypotheses",
+    "Drafted; open to supervisor review"
+   ],
+   [
+    "Literature review on attention and placement",
+    "Partly complete; sources need verification"
+   ],
+   [
+    "Claims and regulatory review",
+    "Partly complete; needs specialist legal input"
+   ],
+   [
+    "Pilot test design and sample-size calculation",
+    "Complete; recalculated"
+   ],
+   [
+    "Experimental data collection",
+    "Not started"
+   ],
+   [
+    "Analysis and results",
+    "Not started"
+   ],
+   [
+    "Ethics and data-use approval",
+    "Not started"
+   ]
+  ]
+ },
+ {
+  "type": "h2",
+  "text": "Abstract"
+ },
+ {
+  "type": "p",
+  "text": "Short-form video advertisers increasingly want films that viewers keep watching, and some studios now market this as “unskippable” advertising. This study asks whether the claim can be supported and, if not, what narrower position the evidence allows. The study proposes three linked questions. First, does an opening that shows the brand and product interface in the first two seconds produce a higher three-second play rate than a problem-led opening, on non-skippable placements? Second, does the same effect hold for a combined hold measure in a B2B-oriented audience? Third, which claims about attention can a small studio make on its own evidence, and which must wait? The design is a within-account, controlled comparison of the first five seconds of otherwise identical films, run on a studio’s own accounts. The analysis will use two-proportion tests and bootstrapped confidence intervals, with the primary metric fixed in advance. The expected contribution is a tested, evidence-graded framework for claims about attention in short-form video, and a measured answer to a question that currently rests on vendor claims."
+ },
+ {
+  "type": "h2",
+  "text": "1. Introduction"
+ },
+ {
+  "type": "p",
+  "text": "The phrase “ads people don’t skip” bundles three claims that should be kept apart: a property of the media placement (whether the ad can be skipped), a property of the creative (whether viewers keep watching), and a measured outcome a client can verify. Each has a different evidence base and a different regulatory status. Treating them as one claim creates two problems for practitioners. It invites unsubstantiated promises, and it makes it hard to learn which creative decisions actually matter."
+ },
+ {
+  "type": "p",
+  "text": "The study is motivated by a practical gap. Studios and agencies sell attention-related services, including hook testing, attention prediction and “hold-tested” production, but the evidence behind most of these offers is either vendor-supplied or drawn from consumer categories that do not transfer to business-to-business audiences. An academic contribution would be a controlled test of creative openings on a defined placement, with the claims analysis attached."
+ },
+ {
+  "type": "h2",
+  "text": "2. Research Questions and Hypotheses"
+ },
+ {
+  "type": "p",
+  "text": "RQ1. On non-skippable YouTube placements, does an opening that shows brand and product interface within the first two seconds produce a higher three-second play rate than an opening that leads with a problem statement?"
+ },
+ {
+  "type": "p",
+  "text": "H1. The brand-and-interface opening produces a higher three-second play rate than the problem-led opening, with the same film body and call to action."
+ },
+ {
+  "type": "p",
+  "text": "RQ2. Does the difference in RQ1 persist to a later hold measure (ThruPlay per three-second play) in a B2B-oriented audience?"
+ },
+ {
+  "type": "p",
+  "text": "H2. The brand-and-interface opening produces a higher hold rate, but the difference is smaller than the difference in RQ1, because later creative elements dominate hold once viewers have started."
+ },
+ {
+  "type": "p",
+  "text": "RQ3. Which claims about attention can a small studio support on its own measured evidence, and which remain outside what the evidence allows?"
+ },
+ {
+  "type": "p",
+  "text": "RQ3 is addressed by applying a claim-ladder framework to the study’s results, rather than by a hypothesis test."
+ },
+ {
+  "type": "h2",
+  "text": "3. Literature Review (Partial)"
+ },
+ {
+  "type": "p",
+  "text": "The review draws on four strands."
+ },
+ {
+  "type": "p",
+  "text": "Ad skipping behaviour. An industry study by IPG Mediabrands and Magna (2017, reported in Research Live, more than 11,000 consumers) reported that a large majority of respondents skip as soon as they can, describe skipping as habitual, and watch an average of about 5.5 seconds of a 15-second ad. The same reporting noted that skipped ads still contributed to recall. The study is consumer-focused and nearly a decade old. It is useful as a baseline, not as a current estimate. Status: second-hand; original report to be obtained and checked."
+ },
+ {
+  "type": "p",
+  "text": "B2B attention. An industry study by the LinkedIn B2B Institute with Media Science (2024, reported in Marketing Week, 109 B2B ads, 770 respondents) reported short attention spans, low recall, and better recognition for shorter ads and for ads with more brand mentions. It is the most decision-relevant source for this study. Status: second-hand; original report to be obtained, and sample definition and analysis method checked."
+ },
+ {
+  "type": "p",
+  "text": "Creative effects. Google’s ABCD framework and a Kantar test comparing 15- and 30-second versions of one advertisement suggest that early brand cues and early product storytelling carry substantial weight. These are a framework and a single test, not a general finding. A LinkedIn Creative Labs analysis of about 13,000 B2B ads is correlational and platform-published. Its finding on video length points in a different direction from the recall study, which indicates that the outcome metric matters. Status: sources to be obtained; the metric-dependence point is central to the design."
+ },
+ {
+  "type": "p",
+  "text": "Claims and regulation. Guidance from the US Federal Trade Commission on substantiation, the UK Advertising Standards Authority and Committee of Advertising Practice on objective claims, and Google’s misleading ad design policy. The principle relevant here is that an objective claim such as “people won’t skip” needs a reasonable basis before it is made. Status: primary texts to be checked against current versions; specialist review needed."
+ },
+ {
+  "type": "p",
+  "text": "Gap. The review found no neutral, peer-reviewed study of B2B hook or hold rates for non-skippable video, and no independent evaluation of attention-prediction tools for this format. The gap justifies the study. Its strength depends on a fuller search of academic databases, which has not yet been done."
+ },
+ {
+  "type": "h2",
+  "text": "4. Research Design"
+ },
+ {
+  "type": "h3",
+  "text": "4.1 Design"
+ },
+ {
+  "type": "p",
+  "text": "The study uses a within-account controlled comparison. Two or more openings are produced for the same film body, differing only in the first five seconds. The openings are shown to comparable audiences, at equal budget, on the same placement, over the same period. The comparison is randomised at the level the platform allows, which in practice means ad-set or ad-level splits with the platform’s delivery engine. Where the platform cannot randomise cleanly, the limitation is reported."
+ },
+ {
+  "type": "h3",
+  "text": "4.2 Variables"
+ },
+ {
+  "type": "p",
+  "text": "The independent variable is the opening type: brand-and-interface first (treatment) or problem-led first (control). The primary dependent variable is the three-second play rate, defined as three-second plays divided by impressions. The secondary dependent variable is the ThruPlay rate, defined as ThruPlays divided by three-second plays. Cost per view is recorded as a descriptive measure, not a test variable."
+ },
+ {
+  "type": "h3",
+  "text": "4.3 Sample Size"
+ },
+ {
+  "type": "p",
+  "text": "The sample size calculation uses a two-sided test at 5 percent significance with 80 percent power, comparing two proportions. The calculation was recalculated for this paper."
+ },
+ {
+  "type": "p",
+  "text": "For a baseline three-second play rate of 30 percent against 40 percent, about 357 three-second plays are needed per variant. For 30 against 35 percent, about 1,376 per variant are needed. For 30 against 33 percent, about 3,760 per variant are needed. These are counts of plays, not impressions. At a 30 percent play rate, 357 plays require roughly 1,190 impressions per variant."
+ },
+ {
+  "type": "p",
+  "text": "The study pre-specifies a minimum detectable difference of five percentage points, which requires about 1,400 plays per variant. Differences smaller than this will be reported as inconclusive, not as null results."
+ },
+ {
+  "type": "p",
+  "text": "Earlier informal calculations in the studio’s own materials gave a figure of 4,200 for a three-point difference. That figure was incorrect, and the corrected value above should be used."
+ },
+ {
+  "type": "h3",
+  "text": "4.4 Analysis Plan"
+ },
+ {
+  "type": "p",
+  "text": "The primary test is a two-proportion z-test on three-second play rates between variants, with a 95 percent confidence interval on the difference. Because multiple ads may run concurrently, the analysis will treat each opening pair as a separate pre-registered comparison, and report results without correction for exploratory comparisons that are labelled as such."
+ },
+ {
+  "type": "p",
+  "text": "Confidence intervals for the secondary measure will be obtained by bootstrapping over ad-days. Results will be reported with sample sizes, dates, placement, audience definition and budget. Platform-reported figures will be reconciled against the platform’s raw export where possible, and any discrepancy will be disclosed."
+ },
+ {
+  "type": "h3",
+  "text": "4.5 Pre-Registration"
+ },
+ {
+  "type": "p",
+  "text": "Before data collection, the study will record the hypotheses, primary metric, sample size, stopping rule (run until the planned plays are reached or seven days elapse, whichever comes first), and the analysis plan in a dated document. The document will be shared with the supervisor before the test begins. Any change after launch will be recorded as a deviation."
+ },
+ {
+  "type": "h2",
+  "text": "5. Ethics, Data and Claims Constraints"
+ },
+ {
+  "type": "p",
+  "text": "The study will use only the studio’s own film content and its own ad accounts. It will not use data from client accounts, or from any agency account the author has access to for other purposes, without written permission from the account owner. Results will not name clients. Where a result is used publicly, it will carry its sample size and the date range, and will be labelled as early if the sample is below the planned threshold."
+ },
+ {
+  "type": "p",
+  "text": "The study will not produce public performance claims during the test. Results will be used first to inform the claim ladder described in Section 6. Any public use of a result will go through legal review, because objective claims about attention are subject to substantiation requirements."
+ },
+ {
+  "type": "p",
+  "text": "Ethics approval from the MBA programme is required before data collection starts. This section should be updated with the approval reference once obtained. Status: not yet submitted."
+ },
+ {
+  "type": "h2",
+  "text": "6. Claim Ladder"
+ },
+ {
+  "type": "p",
+  "text": "The study distinguishes three tiers of claim. The first tier covers process and craft, which needs no test and can be stated now. The second covers measured results from named tests, with sample size, platform, dates and baseline disclosed, and is available only after the study’s data exists. The third covers claims the study cannot support, including “unskippable,” “skip-proof,” guaranteed views, guaranteed return on ad spend, and any result without data. RQ3 is answered by placing each candidate claim on this ladder at the end of the study."
+ },
+ {
+  "type": "h2",
+  "text": "7. Limitations (Anticipated)"
+ },
+ {
+  "type": "p",
+  "text": "The study uses one studio, a small number of films and one placement family, which limits generalisation. Platform delivery algorithms change over time, and results from one period may not hold in another. Three-second plays are a platform-defined metric, and their meaning depends on how the platform counts them. Audience overlap between variants is not fully controllable. The B2B hold analysis depends on the audience reached through the platform, which may not represent the business buyers the studio serves. The literature review is partial, and the claims analysis has not been reviewed by a specialist. These limitations will be expanded once the data is collected."
+ },
+ {
+  "type": "h2",
+  "text": "8. Remaining Work and Timeline"
+ },
+ {
+  "type": "p",
+  "text": "The next steps are as follows."
+ },
+ {
+  "type": "p",
+  "text": "Obtain and verify the primary sources listed in Section 3, using academic databases and the original reports."
+ },
+ {
+  "type": "p",
+  "text": "Complete the claims and regulatory review with a specialist adviser."
+ },
+ {
+  "type": "p",
+  "text": "Submit the ethics application to the MBA programme."
+ },
+ {
+  "type": "p",
+  "text": "Write and date the pre-registration document, and share it with the supervisor."
+ },
+ {
+  "type": "p",
+  "text": "Produce the six opening variants and the shared film body."
+ },
+ {
+  "type": "p",
+  "text": "Run the test on the studio’s own accounts, to the planned sample."
+ },
+ {
+  "type": "p",
+  "text": "Analyse the results against the pre-specified plan, and write them up in the results section."
+ },
+ {
+  "type": "p",
+  "text": "Revise this working paper into a finished thesis chapter or journal submission."
+ },
+ {
+  "type": "p",
+  "text": "Dates for each step will be set with the supervisor. Status: to be scheduled."
+ },
+ {
+  "type": "h2",
+  "text": "9. Expected Contribution"
+ },
+ {
+  "type": "p",
+  "text": "If completed, the study would provide a controlled, pre-registered comparison of opening types on a defined placement, a measured answer to whether brand-first openings improve early attention in a B2B-oriented setting, and a graded framework for the claims that practitioners in this area can responsibly make. It would also show, by example, how to evaluate vendor-supplied attention claims without relying on them."
+ },
+ {
+  "type": "h2",
+  "text": "References (To Be Verified)"
+ },
+ {
+  "type": "p",
+  "text": "Research Live (2017). Report on the IPG Mediabrands and Magna study of ad skipping behaviour. [Verify original study and figures.]"
+ },
+ {
+  "type": "p",
+  "text": "Marketing Week (2024). Report on the LinkedIn B2B Institute and Media Science study of B2B ad attention. [Verify original study and figures.]"
+ },
+ {
+  "type": "p",
+  "text": "Kantar. Test of 15-second and 30-second versions of a single advertisement, with brand lift results. [Verify source.]"
+ },
+ {
+  "type": "p",
+  "text": "Google. ABCD framework for effective advertising creative. [Verify current version.]"
+ },
+ {
+  "type": "p",
+  "text": "LinkedIn Creative Labs, as reported by PPC Land. Analysis of B2B video ad creative. [Verify original analysis.]"
+ },
+ {
+  "type": "p",
+  "text": "Federal Trade Commission. Policy Statement on Advertising Substantiation. [Verify current text.]"
+ },
+ {
+  "type": "p",
+  "text": "Advertising Standards Authority and Committee of Advertising Practice. UK Code of Non-broadcast Advertising. [Verify current text.]"
+ },
+ {
+  "type": "p",
+  "text": "Google Ads. Misleading Ad Design policy. [Verify current text.]"
+ },
+ {
+  "type": "p",
+  "text": "Miller, E. (2024). Adding error bars to evals: A statistical approach to language model evaluations. arXiv preprint. [Verify; cited only as a methodological reference for interval reporting.]"
+ }
+]

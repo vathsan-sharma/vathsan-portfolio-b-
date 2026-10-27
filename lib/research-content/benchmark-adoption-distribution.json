@@ -1,0 +1,158 @@
+[
+ {
+  "type": "h2",
+  "text": "Abstract"
+ },
+ {
+  "type": "p",
+  "text": "A rigorous benchmark that nobody uses has limited value. Research impact depends on whether researchers, developers and AI labs can find a release, understand what it measures, reproduce its results and build on it. This paper proposes a distribution framework for technical AI research, covering audience mapping, packaging, launch sequencing and impact measurement. The framework treats adoption as a set of observable steps, each of which can be designed and measured: discovery, comprehension, trial, citation and reuse. We describe the artefacts that support each step, the channels most relevant to each audience, and the metrics that distinguish genuine uptake from attention. We also set out a feedback loop that returns ecosystem signals to the research team. The paper is written for research marketers, benchmark maintainers and technical leads who are responsible for what happens after publication."
+ },
+ {
+  "type": "h2",
+  "text": "1. Introduction"
+ },
+ {
+  "type": "p",
+  "text": "Most benchmark launches receive a burst of attention and then a long tail of silence. The burst is often driven by a single post or a press mention. The tail depends on whether the work has been packaged so that others can use it without the original team’s help. Research marketing sits between these two outcomes. Its job is to shape how a release is discovered, understood and adopted, and to learn from what happens next."
+ },
+ {
+  "type": "p",
+  "text": "This paper argues that adoption is designable. It is not a matter of luck or of the strength of a single announcement. Each step from first sight to repeated use has specific barriers, and each barrier has a corresponding artefact or practice that reduces it. The framework below names those steps, links them to audiences, and proposes measures that a small team can track."
+ },
+ {
+  "type": "h2",
+  "text": "2. The Adoption Ladder"
+ },
+ {
+  "type": "p",
+  "text": "We describe adoption as five steps. Discovery is the moment a relevant person first encounters the work. Comprehension is the point at which they understand what the benchmark measures, what it does not measure, and how it was built. Trial is the first hands-on use, such as running the evaluation on a model or inspecting the data. Citation is the act of referring to the work in a publication, documentation or internal report. Reuse is sustained adoption: the benchmark is extended, included in a suite, or used as a standard reference."
+ },
+ {
+  "type": "p",
+  "text": "Each step has a different conversion rate and a different failure mode. Many releases fail at comprehension, where the methodology is accessible only to the original authors. Others fail at trial, where setup takes longer than an afternoon. Citation often lags by months, because researchers cite work after it has appeared in a paper or a repository they trust. Reuse depends on maintenance, licensing and whether the benchmark is easy to extend."
+ },
+ {
+  "type": "p",
+  "text": "Mapping the ladder for each release lets the team see where the drop-off is likely to occur and allocate effort accordingly. A benchmark with strong discovery but weak comprehension needs a clearer methodology page, not another announcement."
+ },
+ {
+  "type": "h2",
+  "text": "3. Audience Mapping"
+ },
+ {
+  "type": "p",
+  "text": "Technical AI research has several audiences with different information needs. Academic researchers want methodological detail, comparability with prior work and a clear citation. Applied machine learning engineers want to know whether the benchmark tests something their product depends on, and how long it takes to run. AI labs want evidence that the benchmark is rigorous and not gameable, and they may want to see it before others do. Developers and practitioners in specific sectors, such as legal technology or health informatics, want to know whether the content reflects their domain."
+ },
+ {
+  "type": "p",
+  "text": "Each audience is reached through different channels. Researchers are more likely to find work through preprint servers, conference workshops, reading groups and the citation trails of papers they already use. Engineers tend to find benchmarks through repositories, package managers, leaderboards and the posts of practitioners they follow. Domain practitioners respond to case-style explanations and worked examples in their own vocabulary."
+ },
+ {
+  "type": "p",
+  "text": "The mapping should be specific. “Researchers” is not an audience. “Researchers who evaluate long-context retrieval and publish on reasoning under constraint” is one. The narrower definition makes it possible to choose channels and to recognise the right people when they respond."
+ },
+ {
+  "type": "h2",
+  "text": "4. Packaging the Work"
+ },
+ {
+  "type": "p",
+  "text": "Packaging is the set of materials that lets each audience move up the ladder. The core package for a benchmark release typically includes a short overview page that states the construct, the item count and the headline results with uncertainty; a methodology document that covers item creation, grading and known limitations; a data card describing provenance, licence and intended use; a reproduction guide with the exact commands and model versions; and a changelog that records revisions."
+ },
+ {
+  "type": "p",
+  "text": "Each artefact should serve a step on the ladder. The overview supports discovery and comprehension. The methodology and data card support comprehension and trust. The reproduction guide supports trial. The changelog supports reuse, because it tells adopters what has changed and whether their earlier results still hold."
+ },
+ {
+  "type": "p",
+  "text": "Packaging also includes presentation. A research page should lead with the question the benchmark answers, not with the name of the dataset. A technical blog post should explain one finding in depth rather than summarise everything. A repository should have a working example that runs in a few minutes on modest hardware. These choices cost little and improve each step of the ladder."
+ },
+ {
+  "type": "h2",
+  "text": "5. Launch Sequencing"
+ },
+ {
+  "type": "p",
+  "text": "A launch is a sequence, not an event. A common pattern is to release the artefacts quietly, invite a small group of trusted researchers or practitioners to test them, incorporate their feedback, and then publish widely. This sequencing protects against errors that would otherwise be discovered publicly, and it gives early adopters a stake in the work."
+ },
+ {
+  "type": "p",
+  "text": "The sequence should also account for claims. Any headline result should pass the publication-readiness checks described in the companion paper on benchmark claims, with the wording reviewed against the evidence before any external material goes out. Launch materials that make claims the evidence cannot support damage adoption more than a modest launch does, because researchers who find an overstatement tend to say so."
+ },
+ {
+  "type": "p",
+  "text": "Timing matters less than many teams assume. Launches tied to conferences or model releases can help discovery, but a benchmark that is genuinely useful will continue to be found through the steps above. The team should plan for a second and third wave of communication, such as a follow-up analysis or a worked example for a new audience, rather than treating the launch as the end of the work."
+ },
+ {
+  "type": "h2",
+  "text": "6. Measuring Impact"
+ },
+ {
+  "type": "p",
+  "text": "Attention is easy to measure and poorly correlated with use. Impact measures should distinguish the steps on the ladder. Discovery can be tracked through referral sources and search impressions. Comprehension can be approximated by time on the methodology page and the proportion of visitors who reach it. Trial can be measured through repository clones, package downloads, successful evaluation runs reported by users, and issues or questions opened by people who have tried the benchmark. Citation can be tracked through citation databases and mentions in papers, with a lag of several months. Reuse can be tracked through forks, derivative benchmarks, inclusion in evaluation suites, and sustained contributions."
+ },
+ {
+  "type": "p",
+  "text": "Each measure has a known bias. Download counts can be inflated by automated systems. Citation counts lag and vary by field. Forks do not always indicate use. The recommended practice is to report a small set of measures together, state their limitations, and avoid presenting a single number as proof of impact."
+ },
+ {
+  "type": "p",
+  "text": "Qualitative feedback deserves equal weight. Questions from users reveal where the documentation is unclear. Reports of failed runs reveal where the setup is brittle. Public critiques, although uncomfortable, reveal where the claims have been read more broadly than intended."
+ },
+ {
+  "type": "h2",
+  "text": "7. Closing the Loop With the Research Team"
+ },
+ {
+  "type": "p",
+  "text": "The most valuable output of a distribution effort may be what it teaches the research team. Adopters often identify gaps in coverage, requests for new domains, or ambiguities in the grading rubric that the original team had not considered. A feedback loop captures these signals, sorts them by frequency and severity, and brings them into the next research cycle."
+ },
+ {
+  "type": "p",
+  "text": "The mechanism can be simple: a shared log of ecosystem feedback, a monthly review in which the research lead and the marketing lead agree which signals should change the roadmap, and a published response to the community that explains what was changed and why. Closing the loop publicly also builds trust with the adopters who raised the issues."
+ },
+ {
+  "type": "h2",
+  "text": "8. Anonymised Illustration"
+ },
+ {
+  "type": "p",
+  "text": "In a previous role, the author ran a recurring reporting process for multiple client accounts and had to communicate technical findings, such as attribution gaps and tracking limitations, to stakeholders who were not specialists. The most effective communications led with the decision the reader needed to make, then gave the evidence in order of importance, then stated the limits. Stakeholders who received this format were more likely to act on the findings, and more likely to return with questions that improved the next cycle."
+ },
+ {
+  "type": "p",
+  "text": "The same structure applies to technical research. A researcher deciding whether to use a benchmark is making a decision, and the packaging should support that decision directly. [TO FILL: one sentence describing the reporting scale and audience, with approval for disclosure.] [TO FILL: one example of a communication change that increased stakeholder action or follow-up questions, with identifying details removed.]"
+ },
+ {
+  "type": "h2",
+  "text": "9. Limitations"
+ },
+ {
+  "type": "p",
+  "text": "The framework describes a pattern rather than a guaranteed outcome. Adoption depends on the quality of the research, the relevance of the problem, the competitive landscape and factors outside any team’s control. The measures suggested here are indicators, not proof. Smaller teams may find that some artefacts, such as a full data card or a multi-platform reproduction, are not affordable for every release, and should prioritise the artefacts that serve the steps where their particular release is most likely to stall."
+ },
+ {
+  "type": "h2",
+  "text": "10. Conclusion"
+ },
+ {
+  "type": "p",
+  "text": "Adoption of technical research is a sequence of steps that can be mapped, packaged and measured. A distribution framework that identifies the audience, equips each step of the adoption ladder, sequences the launch responsibly and returns ecosystem feedback to the research team turns a single release into a continuing contribution. For research marketers, the work is to make the rigour of the research visible, usable and open to scrutiny."
+ },
+ {
+  "type": "h2",
+  "text": "References"
+ },
+ {
+  "type": "p",
+  "text": "Gebru, T., Morgenstern, J., Vecchione, B., Vaughan, J. W., Wallach, H., Daumé III, H., and Crawford, K. (2018). Datasheets for datasets. arXiv preprint. [Verify citation before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Mitchell, M., Wu, S., Zaldivar, A., Barnes, P., Vasserman, L., Hutchinson, B., Spitzer, E., Raji, I. D., and Gebru, T. (2019). Model cards for model reporting. Proceedings of the ACM Conference on Fairness, Accountability, and Transparency. [Verify citation before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Pineau, J., Vincent-Lamarre, P., Sinha, K., Larivière, V., Beygelzimer, A., d’Alché-Buc, F., Fox, E., and Larochelle, H. (2021). Improving reproducibility in machine learning research. Journal of Machine Learning Research, 22. [Verify citation before publication.]"
+ }
+]

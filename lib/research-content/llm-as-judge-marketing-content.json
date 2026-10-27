@@ -1,0 +1,182 @@
+[
+ {
+  "type": "h2",
+  "text": "Abstract"
+ },
+ {
+  "type": "p",
+  "text": "Marketing teams increasingly use large language models to score ad copy, landing page text and email drafts before human review. The appeal is speed and cost. The risk is that a model’s score looks objective while reflecting position effects, length preferences, self-preference for its own style, or a rubric that does not match what the business values. This paper examines the reliability of language models as judges of marketing content and proposes a validation protocol that a marketing team can run before trusting any automated score. The protocol has four stages: rubric definition tied to a business outcome, human gold-standard labelling, agreement measurement between the model and human reviewers, and bias testing across position, length and source attribution. The paper explains the statistics appropriate to each stage, the failure modes that most often appear in practice, and the decisions a team should make based on the results. Empirical results from a live dataset are not yet available; the paper specifies the protocol and the hypotheses it tests, and marks where the team’s own data is required."
+ },
+ {
+  "type": "h2",
+  "text": "1. Introduction"
+ },
+ {
+  "type": "p",
+  "text": "A typical content workflow now includes a model-based review step. A draft is scored against criteria such as clarity, claim strength, brand voice or compliance, and only drafts above a threshold reach a human. This step has become common because human review is slow and inconsistent, and because a model can apply a rubric to every draft."
+ },
+ {
+  "type": "p",
+  "text": "The concern is that the scores are rarely validated. A rubric written in a prompt is a set of instructions, not a measurement instrument, and a score of 8 out of 10 has no meaning until it has been shown to predict something a human cares about. The question this paper addresses is therefore not whether language models can judge marketing content, but under what conditions their judgements can be trusted, and how a team can establish that for its own use."
+ },
+ {
+  "type": "p",
+  "text": "The paper draws on the LLM-as-judge literature, in which researchers have documented position bias, verbosity bias and self-preference in model judges, and on established methods from psychometrics and content analysis for measuring agreement. It applies those methods to the specific setting of marketing content, where the outcome that matters is usually a business metric rather than a benchmark answer."
+ },
+ {
+  "type": "h2",
+  "text": "2. Background"
+ },
+ {
+  "type": "p",
+  "text": "Model-based evaluation was popularised for general chat quality, where pairwise comparisons by a strong model were shown to correlate reasonably with human preference in some settings (Zheng et al., 2023; this should be verified against the published version). Later work proposed structured scoring with chain-of-thought reasoning to improve consistency (Liu et al., 2023). Subsequent studies found systematic biases. Models have been shown to favour the first-presented option in pairwise comparisons, to prefer longer responses, and to rate outputs more highly when they resemble their own style."
+ },
+ {
+  "type": "p",
+  "text": "These findings were established on general-purpose tasks. Marketing content differs in three respects that matter for validity. The relevant criterion is often an outcome (click-through, reply rate, lead quality) that a judge cannot observe. The content is short, so length effects can be large relative to quality. And brand voice is a local standard that no general training corpus defines. Each difference means that results from general evaluation cannot be transferred to marketing without testing."
+ },
+ {
+  "type": "h2",
+  "text": "3. Research Questions and Hypotheses"
+ },
+ {
+  "type": "p",
+  "text": "RQ1. How well does a model’s score agree with the judgement of trained human reviewers on marketing drafts?"
+ },
+ {
+  "type": "p",
+  "text": "H1. Agreement between the model and the human consensus is substantial on criteria that are factual or checkable (for example, whether a claim is supported by a stated source), and weaker on criteria that depend on brand voice or persuasive judgement."
+ },
+ {
+  "type": "p",
+  "text": "RQ2. Does the model’s score predict a downstream outcome that the business measures?"
+ },
+ {
+  "type": "p",
+  "text": "H2. Model scores correlate with human scores, but the correlation with downstream outcomes (such as click-through rate on published variants) is weaker than the correlation with human scores, because the outcome depends on audience and placement as well as copy quality."
+ },
+ {
+  "type": "p",
+  "text": "RQ3. Are model judgements systematically affected by position, length or the apparent source of a draft?"
+ },
+ {
+  "type": "p",
+  "text": "H3. Position effects appear when the model compares two drafts in one prompt. Length effects appear as a preference for longer drafts when quality is held constant. Self-preference appears when the model is shown drafts that it generated compared with drafts written by humans."
+ },
+ {
+  "type": "h2",
+  "text": "4. Proposed Method"
+ },
+ {
+  "type": "h3",
+  "text": "4.1 Rubric Definition"
+ },
+ {
+  "type": "p",
+  "text": "The rubric is defined before any scoring. Each criterion must be tied to a business decision. A criterion such as “clarity” is acceptable only if the team can state what decision a clarity score informs, for example whether a draft proceeds to review. Each criterion is defined in observable terms, with a short description of a pass, a borderline case and a fail. Criteria that cannot be observed in the text, such as likely performance, should be excluded from the rubric or handled as a separate outcome measure."
+ },
+ {
+  "type": "h3",
+  "text": "4.2 Gold-Standard Labelling"
+ },
+ {
+  "type": "p",
+  "text": "A sample of drafts is scored independently by at least two trained reviewers. The sample should include drafts from several sources, including model-generated and human-written copy, and should cover the range of quality the team sees in practice. Reviewers work from the rubric, not from a holistic impression, and disagreements are resolved by discussion with a third reviewer who records the reason. Inter-rater agreement is measured with Krippendorff’s alpha for ordinal criteria, and reported with the number of items and raters."
+ },
+ {
+  "type": "h3",
+  "text": "4.3 Model Agreement"
+ },
+ {
+  "type": "p",
+  "text": "The same drafts are scored by the model under the same rubric, with the prompt, model version and settings recorded. Agreement with the human consensus is measured using Cohen’s kappa for categorical decisions and a weighted kappa or Spearman correlation for ordinal scores. Results are reported by criterion, not as a single overall figure, because the model may be reliable on one criterion and unreliable on another."
+ },
+ {
+  "type": "p",
+  "text": "A useful threshold is set in advance. For example, a team may decide that a criterion is eligible for automated screening only if agreement with the human consensus reaches a pre-specified level, and that agreement must be stable across the drafts’ sources. The threshold is a management decision and should be recorded with its rationale."
+ },
+ {
+  "type": "h3",
+  "text": "4.4 Bias Testing"
+ },
+ {
+  "type": "p",
+  "text": "Three tests are included. The position test presents the same two drafts in both orders and measures how often the preferred draft changes. A position-consistent model should change its preference rarely. The length test pairs drafts of similar quality with different lengths, controlling quality through the human scores, and measures whether the model’s score tracks length beyond what quality explains. The source test compares scores for matched drafts labelled as model-generated and human-written, with the labels removed for half the sample, to test self-preference."
+ },
+ {
+  "type": "h3",
+  "text": "4.5 Outcome Validation"
+ },
+ {
+  "type": "p",
+  "text": "Where the team publishes variants, the model’s scores can be compared with outcomes such as click-through or reply rate. This is the only test that addresses whether the score matters commercially. Because the outcome depends on audience, placement and offer, the analysis should compare variants within the same campaign and state the sample size and confidence intervals. Correlation with an outcome does not establish that the score caused the outcome, and this should be stated."
+ },
+ {
+  "type": "h2",
+  "text": "5. Expected Failure Modes"
+ },
+ {
+  "type": "p",
+  "text": "Several failure modes are likely, and the protocol is designed to detect them. A model may agree with humans on easy drafts and diverge on borderline ones, which inflates overall agreement. It may reward confident claims that a human reviewer would flag as unsubstantiated, which matters for regulated sectors. It may score brand voice against a generic idea of professional copy rather than the team’s own voice guide, unless the guide is supplied and tested. And a rubric that is too long can cause the model to weight criteria unevenly, so the rubric should be tested for stability as well as accuracy."
+ },
+ {
+  "type": "h2",
+  "text": "6. Decisions the Results Should Drive"
+ },
+ {
+  "type": "p",
+  "text": "The protocol is designed to produce three decisions. The first is whether to automate a criterion, keep it as advisory, or leave it to human review. The second is whether a model’s score should be presented to reviewers, and if so with what caveat. The third is whether the rubric or the prompt should change, and what re-validation is required when the model version changes."
+ },
+ {
+  "type": "p",
+  "text": "A strong result on factual criteria and a weak result on persuasive criteria would support using the model as a screening tool for claims checks, while keeping human review for copy quality. A weak result across the board would indicate that the model should be used only for triage, not for scoring."
+ },
+ {
+  "type": "h2",
+  "text": "7. Anonymised Illustration"
+ },
+ {
+  "type": "p",
+  "text": "In a previous role managing weekly performance reporting, the author set up a sign-off checklist for the data behind each report. Early versions relied on the preparer’s judgement of whether the numbers were reliable, and the reviewers’ judgements differed. Defining each check in observable terms, and comparing reviewers on the same reports, reduced disagreement and identified two checks that were ambiguous and needed rewriting. The same process of defining observable criteria and measuring reviewer agreement is the first stage of the protocol above. [TO FILL: one sentence on the scale of the reporting process and the number of reviewers, with approval for disclosure.] [TO FILL: one example of a checklist item that was rewritten after reviewers disagreed, with identifying details removed.]"
+ },
+ {
+  "type": "h2",
+  "text": "8. Limitations"
+ },
+ {
+  "type": "p",
+  "text": "The protocol depends on the quality of the human gold standard. If reviewers share a bias, the model will be validated against the bias. The results will be specific to the model version, prompt and rubric tested, and must be repeated when any of these changes. The sample sizes needed for stable agreement estimates may be larger than a small team expects, particularly for rare failure cases. Finally, the outcome validation depends on campaign data that may be confounded by budget, audience and timing."
+ },
+ {
+  "type": "h2",
+  "text": "9. Conclusion"
+ },
+ {
+  "type": "p",
+  "text": "A language model’s score on marketing content is an instrument, and like any instrument it needs calibration, a defined rubric and evidence of validity before its output drives decisions. The four-stage protocol offers a practical route to that evidence. Its value lies less in the particular numbers than in making the team state what the score is for, and in showing where it can be trusted."
+ },
+ {
+  "type": "h2",
+  "text": "References (To Be Verified)"
+ },
+ {
+  "type": "p",
+  "text": "Zheng, L., Chiang, W.-L., Sheng, Y., et al. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. Advances in Neural Information Processing Systems, Datasets and Benchmarks Track. [Verify citation and findings.]"
+ },
+ {
+  "type": "p",
+  "text": "Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., and Zhu, C. (2023). G-Eval: NLG evaluation using GPT-4 with better human alignment. Proceedings of EMNLP. [Verify citation.]"
+ },
+ {
+  "type": "p",
+  "text": "Krippendorff, K. (2011). Computing Krippendorff’s alpha-reliability. [Verify citation.]"
+ },
+ {
+  "type": "p",
+  "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement. [Verify citation.]"
+ },
+ {
+  "type": "p",
+  "text": "Note on sourcing: the bias findings cited in Section 2 (position, verbosity and self-preference effects) should be checked against the specific papers before publication, since web search was unavailable when this draft was written."
+ }
+]

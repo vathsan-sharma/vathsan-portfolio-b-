@@ -1,0 +1,206 @@
+[
+ {
+  "type": "h2",
+  "text": "Abstract"
+ },
+ {
+  "type": "p",
+  "text": "Advertisers increasingly want video that viewers keep watching, and some studios have begun to sell that promise as “unskippable” ads. This paper examines whether such a promise can be made honestly. It makes three arguments. First, skippability is a property of the media placement, not of the creative, so a claim that people will not skip describes a platform setting rather than a creative outcome. Second, the attention evidence supports a narrower and more defensible idea: short, brand-early, product-forward films that earn the next few seconds of attention, measured through a hold rate the client can verify. Third, a small studio can test this idea with its own ad accounts before making any public performance claim. The paper reviews placement formats, the available attention research, the legal and platform constraints on claims, and the gap in the market. It proposes a measurement protocol with a sample-size calculation and a claim ladder that separates what can be said now from what must wait for data. Where evidence is second-hand or vendor-supplied, the paper says so. The paper is intended as a decision document for a studio owner and as an example of evidence-graded research for a marketing audience."
+ },
+ {
+  "type": "h2",
+  "text": "1. Introduction"
+ },
+ {
+  "type": "p",
+  "text": "The phrase “ads people don’t skip” is commercially attractive and analytically loose. It bundles three different things: a media format that cannot be skipped, a creative that holds attention, and a measured outcome that a client can verify. Treating them as one claim creates risk. This paper separates them and asks what can be supported, by whom, and at what cost."
+ },
+ {
+  "type": "p",
+  "text": "The research question is: what can a small video production studio honestly promise about the attention its films receive, and how could it earn the right to a stronger claim? Answering it requires three bodies of evidence, namely the mechanics of ad placements, the research on attention and recall, and the rules that govern objective claims. The paper takes each in turn, then proposes a test."
+ },
+ {
+  "type": "h2",
+  "text": "2. Placement Determines Skippability"
+ },
+ {
+  "type": "p",
+  "text": "Whether a viewer can skip an ad depends almost entirely on where it runs. YouTube offers non-skippable in-stream ads of up to 15 seconds and bumper ads of 6 seconds, both of which cannot be skipped. Skippable in-stream ads can be skipped after five seconds and are typically billed on a cost-per-view basis. Connected-TV inventory from several providers is commonly non-skippable at 15 to 30 seconds, though minimum spend and self-serve access vary. Meta’s Reels, Stories and feed placements allow users to scroll past, so an ad there cannot be forced into view. Pricing, minimums and rules change often, and several figures found in this review were vendor-supplied and unverified."
+ },
+ {
+  "type": "p",
+  "text": "For a small studio, the practical conclusion is that the only placements where “cannot be skipped” is literally true and self-serve are YouTube’s non-skippable formats. A film built for those formats must therefore work in 6 and 15 seconds, and a longer cut must be designed to succeed when a viewer can leave."
+ },
+ {
+  "type": "h2",
+  "text": "3. What the Attention Research Supports"
+ },
+ {
+  "type": "p",
+  "text": "Three studies, read with their limits, frame the evidence."
+ },
+ {
+  "type": "p",
+  "text": "An older consumer study by IPG Mediabrands and Magna (2017, reported in Research Live, with a sample of more than 11,000 consumers) found that around two-thirds of respondents skip as soon as they are able, that most describe skipping as a habit, and that viewers watched on average about 5.5 seconds of a 15-second ad. The same reporting noted that skipped ads still contributed to recall. This is a useful baseline but it is nearly a decade old and consumer-focused."
+ },
+ {
+  "type": "p",
+  "text": "A more recent B2B study by the LinkedIn B2B Institute with Media Science (2024, reported in Marketing Week, across 109 B2B ads and 770 respondents) is more relevant to a studio serving business clients. It reported an average of about 12 seconds on screen, roughly 3.7 seconds of attention, and that more than half of viewers did not recognise the ad afterwards. Ads of 10 seconds or less achieved higher recognition than those of 18 seconds, and ads with three or more brand mentions outperformed those with fewer. These are the most decision-relevant figures in this paper, and they point toward short, brand-forward films."
+ },
+ {
+  "type": "p",
+  "text": "Creative guidance from Google’s ABCD framework and a Kantar test of 15- and 30-second versions of the same ad suggest that brand cues and product storytelling in the first few seconds carry disproportionate weight. The Kantar result, from a single ad tested on consumers, found the shorter version matched the longer one on brand lift. A separate LinkedIn Creative Labs analysis of around 13,000 B2B ads found that creative choices explain much of the variation in completion and engagement, but it is correlational and platform-published, and its findings on length point the other way from the recall study. Length depends on the metric, and a studio should say which metric it is optimising."
+ },
+ {
+  "type": "p",
+  "text": "Two cautions apply across all of this. First, no neutral benchmark for B2B skip or hold rates was found. Figures quoted by performance blogs, such as typical hold rates of 40 to 50 percent, come from direct-to-consumer marketers and should not be applied to B2B work. Second, forced exposure has costs. Non-skippable formats can raise irritation and avoidance, and some research suggests skippable ads can be as effective per impression. “Hard to skip” and “watched” are different outcomes."
+ },
+ {
+  "type": "h2",
+  "text": "4. Claims Law and Platform Policy"
+ },
+ {
+  "type": "p",
+  "text": "A promise that people will not skip an ad is an objective, measurable claim. In the United States, the Federal Trade Commission requires a reasonable basis for objective claims before they are made, and its enforcement history treats unsubstantiated guarantees as misleading even when a disclaimer is present. In the United Kingdom, the Advertising Standards Authority expects documentary evidence for objective claims under the CAP Code. Australian regulators judge the overall impression a headline creates, so fine print does not cure a misleading headline. The European Union prohibits misleading commercial practices."
+ },
+ {
+  "type": "p",
+  "text": "No enforcement case was found that concerned a video studio’s “unskippable” claim specifically. The relevant principle is general, and it applies to this claim because the claim is literal."
+ },
+ {
+  "type": "p",
+  "text": "Platform policy adds a second constraint. Google’s misleading ad design policy prohibits fake skip or close buttons, fake system alerts, fake countdown timers and bait-and-switch hooks, and can suspend accounts quickly. A film that tries to hold viewers by imitating controls would breach that policy and would also undermine the trust the studio is trying to build."
+ },
+ {
+  "type": "p",
+  "text": "Regulated clients add a further layer. A financial or health client carries the substantiation for its own claims, and a studio should not add performance or health claims on its behalf."
+ },
+ {
+  "type": "h2",
+  "text": "5. The Market Gap"
+ },
+ {
+  "type": "p",
+  "text": "Several categories of supplier address parts of the problem. Attention-prediction tools such as System1, DAIVID, Neurons and Brainsight offer predictive scoring. Their accuracy claims are often undefined, and academic commentary describes AI saliency maps as a rough estimate rather than a measurement of attention. Performance agencies sell hook testing bundled with media buying. Low-cost production shops sell volume. A small number of providers offer performance-based guarantees, but their terms were not verified."
+ },
+ {
+  "type": "p",
+  "text": "Across this landscape, the review found no small studio offering all four of the following: a premium film built from the client’s real product interface, several distinct openings tested against one master, platform-correct captions and cuts, and a measured hold rate reported honestly from the client’s own accounts. That combination is the gap this paper proposes to examine, though the gap should be confirmed by a fuller competitor review before it is relied on."
+ },
+ {
+  "type": "h2",
+  "text": "6. The Proposed Positioning"
+ },
+ {
+  "type": "p",
+  "text": "The paper proposes the working name “Hold-tested ads” in place of “unskippable ads.” The name describes a process rather than a guarantee. The offer would include one master film, three distinct opening variants of the first one to five seconds, cuts for six-second bumper, fifteen-second non-skippable and twenty-second vertical placements, burned-in captions, and a measurement sheet the client fills from its own ad account. The measurement sheet would record three-second plays per impression as a hook metric, ThruPlay per three-second play as a hold metric, and cost per view, together with sample size and a plain statement that results depend on audience, budget and offer."
+ },
+ {
+  "type": "p",
+  "text": "A guarantee is possible only in a narrow form. If the client’s own hook rate on the winning opening falls below an agreed threshold in a defined test, the studio re-cuts the opening once at no charge. The guarantee does not cover media spend, reach, return on ad spend or conversions. Its terms should be reviewed by a lawyer before publication."
+ },
+ {
+  "type": "h2",
+  "text": "7. Proposed Test and Sample-Size Calculation"
+ },
+ {
+  "type": "p",
+  "text": "The studio has six existing hook variants. Testing them would produce the evidence needed for any public claim. The recommended design holds everything constant except the first five seconds, uses equal budget and audience, runs for three to seven days, and fixes the primary metric in advance as either the hook rate or retention at five seconds."
+ },
+ {
+  "type": "p",
+  "text": "The sample size calculation below uses a two-sided test at 5 percent significance and 80 percent power, on a comparison of two proportions. I recalculated the figures in an earlier draft. For a baseline hook rate of 30 percent against 40 percent, roughly 357 three-second plays per variant are needed, which matches the earlier estimate. For 30 against 35 percent, about 1,376 per variant are needed. For 30 against 33 percent, about 3,760 per variant are needed, which is lower than the 4,200 figure in the earlier draft and should be used instead."
+ },
+ {
+  "type": "p",
+  "text": "These are counts of plays, not impressions. The number of impressions needed depends on the hook rate. At a 30 percent hook rate, 357 plays require roughly 1,190 impressions per variant. The cost of that delivery depends on the platform’s cost per thousand impressions, which varies widely by market, season and audience, so no cost estimate is given here. The earlier draft’s figure of $50 to $150 per variant was not verified and should not be used until the studio has its own delivery data."
+ },
+ {
+  "type": "p",
+  "text": "Results from a small test should be reported as early and with their sample sizes. A difference that is significant at 1,400 plays per variant is more informative than one drawn from a few hundred."
+ },
+ {
+  "type": "h2",
+  "text": "8. A Claim Ladder"
+ },
+ {
+  "type": "p",
+  "text": "The paper proposes three tiers of claims, matched to the evidence the studio holds."
+ },
+ {
+  "type": "p",
+  "text": "Tier one, available now, covers process and craft. Examples include statements about calm, clear product films delivered quickly, a deliverables guarantee with disclosed terms, and a commitment not to use fake buttons, timers or misleading hooks."
+ },
+ {
+  "type": "p",
+  "text": "Tier two, available after the studio’s own test, covers measured results for named tests. Examples include a statement that a film kept a stated percentage of viewers past a stated point, with the sample size, platform, dates and baseline disclosed, and conditional guarantees limited to re-cutting."
+ },
+ {
+  "type": "p",
+  "text": "Tier three is not available on present evidence. It covers claims such as “unskippable,” “skip-proof,” guaranteed views, guaranteed return on ad spend or leads, and any proven result, invented client, number or testimonial."
+ },
+ {
+  "type": "p",
+  "text": "The ladder is a decision tool. Each public claim should be placed on it before it is published."
+ },
+ {
+  "type": "h2",
+  "text": "9. Decisions for the Owner"
+ },
+ {
+  "type": "p",
+  "text": "Four decisions follow from the analysis. The studio should decide whether to adopt the hold-tested positioning and the claim ladder. It should decide whether to run the six-hook test, which requires an ad account, a budget and an agreement to publish results with their sample sizes. It should decide whether to offer the approach as a new package or as an add-on to existing work, where pricing is a commercial judgement for which no market reference was found. And it should obtain legal review of any guarantee before it goes live."
+ },
+ {
+  "type": "h2",
+  "text": "10. Limitations"
+ },
+ {
+  "type": "p",
+  "text": "This review used one round of search per topic. Several platform pages could not be read, and a number of figures are second-hand. The following were not verified: the skip rules for TikTok TopView, the self-serve minimum for connected-TV advertising on LinkedIn, the minimums for Netflix and Prime Video, the Advertising Standards Authority’s guidance on guarantees, the wording of Meta’s rules on fake buttons, the terms of any performance-guarantee provider, and the rules in Canada. Much of the creative research concerns consumer and fast-moving consumer goods categories. No neutral dataset on B2B retention curves was found, and the studio’s own testing could help fill that gap."
+ },
+ {
+  "type": "h2",
+  "text": "11. Conclusion"
+ },
+ {
+  "type": "p",
+  "text": "“Ads people don’t skip” is not a claim a small studio can honestly make, because skippability belongs to the placement and the claim would be an unverified outcome promise. The evidence does support a narrower position: films built to earn their next few seconds, with brand and product visible early, measured through a hold rate the client can check. The studio can build the proof for that position by testing its own work. Until it does, its public claims should stay within the process and craft tier."
+ },
+ {
+  "type": "h2",
+  "text": "References"
+ },
+ {
+  "type": "p",
+  "text": "Research Live (2017). Report on the IPG Mediabrands and Magna study of ad skipping behaviour. [Verify original study and figures before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Marketing Week (2024). Report on the LinkedIn B2B Institute and Media Science study of B2B ad attention. [Verify original study and figures before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Kantar. Test of 15-second and 30-second versions of a single advertisement, with brand lift results. [Verify source before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Google. ABCD framework for effective advertising creative. [Verify current version before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "LinkedIn Creative Labs, as reported by PPC Land. Analysis of B2B video ad creative. [Verify original analysis before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Federal Trade Commission. Policy Statement on Advertising Substantiation; and the Q&A on the consumer reviews rule. [Verify current text before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Advertising Standards Authority and Committee of Advertising Practice. UK Code of Non-broadcast Advertising. [Verify current text before publication.]"
+ },
+ {
+  "type": "p",
+  "text": "Google Ads. Misleading Ad Design policy. [Verify current text before publication.]"
+ }
+]
