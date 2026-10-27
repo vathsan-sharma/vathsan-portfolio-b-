@@ -13,6 +13,7 @@ export default function Contact() {
       <p className="cap contact-meta">linkedin.com/in/vathsan-sharma · Sri Lanka (Remote)</p>
       <footer className="footer">
         <span>© Vathsan Sharma</span>
+        <a href="/research">Research</a>
       </footer>
     </section>
   );

@@ -1,9 +1,11 @@
 import { SITE_URL } from "../../lib/site";
 import { cases } from "../../lib/cases";
+import { papers } from "../../lib/papers";
 
 // llms.txt: a plain-text summary for AI assistants and answer engines.
 export function GET() {
   const caseLines = cases.map((c) => `- [${c.name}](${SITE_URL}/work/${c.slug}): ${c.summary}`);
+  const paperLines = papers.map((p) => `- [${p.title}](${SITE_URL}/research/${p.slug}): ${p.summary}`);
 
   const body = [
     "# Vathsan Sharma",
@@ -18,9 +20,13 @@ export function GET() {
     `- [Work](${SITE_URL}/work): Selected performance marketing case studies.`,
     `- [Teaching](${SITE_URL}/teaching): Certified training, conference panels, and visiting lectures.`,
     `- [FAQ](${SITE_URL}/faq): Short answers about experience, training, and contact.`,
+    `- [Research](${SITE_URL}/research): Research papers on AI evaluation, marketing measurement, and engineering prototypes.`,
     "",
     "## Case studies",
     ...caseLines,
+    "",
+    "## Research papers",
+    ...paperLines,
     "",
     "## Contact",
     "- Email: vathsansharma@gmail.com",

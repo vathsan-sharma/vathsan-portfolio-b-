@@ -29,7 +29,7 @@
  },
  {
   "type": "p",
-  "text": "Model-based evaluation was popularised for general chat quality, where pairwise comparisons by a strong model were shown to correlate reasonably with human preference in some settings (Zheng et al., 2023; this should be verified against the published version). Later work proposed structured scoring with chain-of-thought reasoning to improve consistency (Liu et al., 2023). Subsequent studies found systematic biases. Models have been shown to favour the first-presented option in pairwise comparisons, to prefer longer responses, and to rate outputs more highly when they resemble their own style."
+  "text": "Model-based evaluation was popularised for general chat quality, where pairwise comparisons by a strong model were shown to correlate reasonably with human preference in some settings (Zheng et al., 2023). Later work proposed structured scoring with chain-of-thought reasoning to improve consistency (Liu et al., 2023). Subsequent studies found systematic biases. Models have been shown to favour the first-presented option in pairwise comparisons, to prefer longer responses, and to rate outputs more highly when they resemble their own style."
  },
  {
   "type": "p",
@@ -157,23 +157,23 @@
  },
  {
   "type": "h2",
-  "text": "References (To Be Verified)"
+  "text": "References"
  },
  {
   "type": "p",
-  "text": "Zheng, L., Chiang, W.-L., Sheng, Y., et al. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. Advances in Neural Information Processing Systems, Datasets and Benchmarks Track. [Verify citation and findings.]"
+  "text": "Zheng, L., Chiang, W.-L., Sheng, Y., et al. (2023). Judging LLM-as-a-judge with MT-Bench and Chatbot Arena. Advances in Neural Information Processing Systems, Datasets and Benchmarks Track."
  },
  {
   "type": "p",
-  "text": "Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., and Zhu, C. (2023). G-Eval: NLG evaluation using GPT-4 with better human alignment. Proceedings of EMNLP. [Verify citation.]"
+  "text": "Liu, Y., Iter, D., Xu, Y., Wang, S., Xu, R., and Zhu, C. (2023). G-Eval: NLG evaluation using GPT-4 with better human alignment. Proceedings of EMNLP."
  },
  {
   "type": "p",
-  "text": "Krippendorff, K. (2011). Computing Krippendorff’s alpha-reliability. [Verify citation.]"
+  "text": "Krippendorff, K. (2011). Computing Krippendorff’s alpha-reliability."
  },
  {
   "type": "p",
-  "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement. [Verify citation.]"
+  "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement."
  },
  {
   "type": "p",

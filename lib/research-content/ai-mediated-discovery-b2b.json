@@ -29,7 +29,7 @@
  },
  {
   "type": "p",
-  "text": "The term generative engine optimisation was introduced in academic work that proposed methods for increasing the visibility of content in model-generated responses, and that tested the effect of different content strategies on visibility metrics (Aggarwal et al., 2024; to be verified). The practitioner literature uses related terms, including answer engine optimisation and AI search visibility. The terms are not yet standardised, and this paper uses “AI-mediated visibility” to mean the presence, position and accuracy of a brand in model-generated answers to buying-related queries."
+  "text": "The term generative engine optimisation was introduced in academic work that proposed methods for increasing the visibility of content in model-generated responses, and that tested the effect of different content strategies on visibility metrics (Aggarwal et al., 2024). The practitioner literature uses related terms, including answer engine optimisation and AI search visibility. The terms are not yet standardised, and this paper uses “AI-mediated visibility” to mean the presence, position and accuracy of a brand in model-generated answers to buying-related queries."
  },
  {
   "type": "p",
@@ -153,15 +153,15 @@
  },
  {
   "type": "h2",
-  "text": "References (To Be Verified)"
+  "text": "References"
  },
  {
   "type": "p",
-  "text": "Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., and Deshpande, A. (2024). GEO: Generative engine optimization. Proceedings of the ACM SIGKDD Conference. [Verify citation and findings.]"
+  "text": "Aggarwal, P., Murahari, V., Rajpurohit, T., Kalyan, A., Narasimhan, K., and Deshpande, A. (2024). GEO: Generative engine optimization. Proceedings of the ACM SIGKDD Conference."
  },
  {
   "type": "p",
-  "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement. [Verify citation.]"
+  "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement."
  },
  {
   "type": "p",
