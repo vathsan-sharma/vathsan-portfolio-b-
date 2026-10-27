@@ -1,6 +1,7 @@
 import Nav from "../components/Nav";
 import Hero from "../components/Hero";
 import Proof from "../components/Proof";
+import ForResearchTeams from "../components/ForResearchTeams";
 import StoryChapters from "../components/StoryChapters";
 import Work from "../components/Work";
 import Speaking from "../components/Speaking";
@@ -27,6 +28,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <Proof />
+      <ForResearchTeams />
       <StoryChapters />
       <Work />
       <Speaking />

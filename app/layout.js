@@ -11,24 +11,24 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "Vathsan Sharma · Senior full-stack digital marketer",
+    default: "Vathsan Sharma · Research and performance marketing",
     template: "%s · Vathsan Sharma",
   },
   description:
-    "Vathsan Sharma: senior full-stack digital marketer and demand generation specialist with 9+ years, $1.5M+ in managed ad spend, and a mechatronics background.",
+    "Research and performance marketing for AI, ML and technical products. 9+ years in paid media, $1.5M+ managed ad spend, with a background in computer science.",
   openGraph: {
-    title: "Vathsan Sharma · Senior full-stack digital marketer",
+    title: "Vathsan Sharma · Research and performance marketing",
     description:
-      "Senior full-stack digital marketer and demand generation specialist with 9+ years in paid media and a mechatronics background.",
+      "Research and performance marketing for AI, ML and technical products. 9+ years in paid media, $1.5M+ managed ad spend, with a background in computer science.",
     siteName: SITE_NAME,
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vathsan Sharma · Senior full-stack digital marketer",
+    title: "Vathsan Sharma · Research and performance marketing",
     description:
-      "Senior full-stack digital marketer and demand generation specialist with 9+ years in paid media and a mechatronics background.",
+      "Research and performance marketing for AI, ML and technical products. 9+ years in paid media, $1.5M+ managed ad spend, with a background in computer science.",
   },
   robots: {
     index: true,

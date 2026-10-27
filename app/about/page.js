@@ -26,7 +26,7 @@ export default function AboutPage() {
       <PageHead
         eyebrow="About"
         title="From robots to revenue."
-        lead="A mechatronics engineer who moved into performance marketing, then into teaching it."
+        lead="A mechatronics engineer who moved into performance marketing, and now brings that to technical AI research."
       />
       <StoryChapters />
       <JourneyTimeline />

@@ -14,6 +14,7 @@ export default function Contact() {
       <footer className="footer">
         <span>© Vathsan Sharma</span>
         <a href="/research">Research</a>
+        <a href="/for-research-teams">For research teams</a>
       </footer>
     </section>
   );

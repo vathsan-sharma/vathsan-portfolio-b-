@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero-copy">
-        <p className="eyebrow">Senior full-stack digital marketer and demand generation specialist</p>
+        <p className="eyebrow">Research and performance marketing for AI, ML and technical work</p>
         <h1 id="hero-title" className="hero-title">
           I once taught <strong>robots</strong> to follow a line.
         </h1>

@@ -10,7 +10,7 @@ export function GET() {
   const body = [
     "# Vathsan Sharma",
     "",
-    "> Senior full-stack digital marketer and demand generation specialist with 9+ years in paid media, more than $1.5M in managed ad spend, and a mechatronics engineering background. Based in Sri Lanka, working remotely.",
+    "> Research and performance marketing for AI, ML and technical products. 9+ years in paid media, $1.5M+ managed ad spend, with a background in computer science. Based in Sri Lanka, working remotely.",
     "",
     "## Pages",
     `- [Home](${SITE_URL}/): Overview, key figures, and contact.`,
@@ -21,6 +21,7 @@ export function GET() {
     `- [Teaching](${SITE_URL}/teaching): Certified training, conference panels, and visiting lectures.`,
     `- [FAQ](${SITE_URL}/faq): Short answers about experience, training, and contact.`,
     `- [Research](${SITE_URL}/research): Research papers on AI evaluation, marketing measurement, and engineering prototypes.`,
+    `- [For research and technical teams](${SITE_URL}/for-research-teams): How the background matches the needs of research and AI product teams.`,
     "",
     "## Case studies",
     ...caseLines,

@@ -3,7 +3,7 @@ export default function manifest() {
     name: "Vathsan Sharma · Portfolio",
     short_name: "Vathsan",
     description:
-      "Senior full-stack digital marketer and demand generation specialist with 9+ years in paid media and a mechatronics background.",
+      "Research and performance marketing for AI, ML and technical products. 9+ years in paid media, $1.5M+ managed ad spend, with a background in computer science.",
     start_url: "/",
     display: "standalone",
     background_color: "#f5f5f7",

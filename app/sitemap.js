@@ -4,7 +4,7 @@ import { posts } from "../lib/posts";
 import { papers } from "../lib/papers";
 
 export default function sitemap() {
-  const staticPaths = ["/", "/about", "/journey", "/gallery", "/work", "/teaching", "/faq"];
+  const staticPaths = ["/", "/about", "/journey", "/gallery", "/work", "/teaching", "/faq", "/for-research-teams"];
   if (posts.length > 0) staticPaths.push("/blog");
   if (papers.length > 0) staticPaths.push("/research");
 
