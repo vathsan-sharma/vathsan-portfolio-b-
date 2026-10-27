@@ -35,20 +35,17 @@ export default function ResearchPage() {
         {papers.length === 0 ? (
           <p className="body">Papers will be listed here.</p>
         ) : (
-          <div className="cases">
+          <ul className="paper-list">
             {papers.map((paper) => (
-              <article className="case" key={paper.slug}>
-                <p className="cap">{paper.venue}</p>
-                <h2 className="paper-title">
-                  <Link href={`/research/${paper.slug}`}>{paper.title}</Link>
-                </h2>
-                <p>{paper.summary}</p>
-                <p className="paper-links">
-                  <Link href={`/research/${paper.slug}`}>Read the paper</Link>
-                </p>
-              </article>
+              <li key={paper.slug}>
+                <Link className="paper-row" href={`/research/${paper.slug}`}>
+                  <span className="paper-venue">{paper.venue}</span>
+                  <span className="paper-row-title">{paper.title}</span>
+                  <span className="paper-arrow" aria-hidden="true">›</span>
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         )}
       </section>
     </PageShell>

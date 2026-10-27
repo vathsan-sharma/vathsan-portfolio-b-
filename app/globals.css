@@ -454,6 +454,49 @@ a {
   font-size: 14px;
 }
 
+/* Research list: each row is one link to the paper's page */
+.paper-list {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 760px;
+  text-align: left;
+  border-top: 0.5px solid var(--rule);
+}
+.paper-list li {
+  border-bottom: 0.5px solid var(--rule);
+}
+.paper-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 4px 16px;
+  padding: 22px 4px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.2s ease;
+}
+.paper-row:hover .paper-row-title {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.paper-venue {
+  grid-column: 1 / -1;
+  font-size: 13px;
+  color: var(--muted);
+}
+.paper-row-title {
+  font-size: 19px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+.paper-arrow {
+  font-size: 24px;
+  color: var(--muted);
+}
+
 /* Keyboard focus: visible for anyone tabbing through the page */
 a:focus-visible {
   outline: 2px solid var(--ink);
