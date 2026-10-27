@@ -1,11 +1,11 @@
 [
  {
   "type": "h2",
-  "text": "Status of This Document"
+  "text": "Scope of This Case Study"
  },
  {
   "type": "p",
-  "text": "This is a draft research paper for a prototype built for an IEEE student competition. The system was evaluated in a controlled setup and with simulated signals. It was not validated with wild elephants or deer on a live road. All statements about road safety impact must be sourced from verified data before submission. Results marked [TO FILL] must be taken from the test records."
+  "text": "This case study describes the design and build of a two-modality early-warning prototype for wildlife crossings on roads, developed for an IEEE student competition in 2018. It covers the problem, the design requirements, the architecture, the fusion rule and the prototype. The prototype was demonstrated in a controlled setup using staged signals. No quantitative evaluation records were retained, so this study makes no claims of detection rate, false-alarm rate or latency, and no claim of performance on a live road."
  },
  {
   "type": "h2",
@@ -13,7 +13,7 @@
  },
  {
   "type": "p",
-  "text": "Wild animals crossing highways are a recurring hazard in Sri Lanka, and collisions with elephants and deer endanger drivers, passengers and the animals themselves. Conventional mitigation, such as fencing and signage, is costly to maintain across long road lengths and does not warn drivers in real time. This paper describes a low-cost early-warning prototype that combines two sensing modalities: an infrared beam-break sensor array to detect crossing events, and a geophone to detect the ground vibration produced by large animals moving nearby. An Arduino handles sensor sampling and thresholding, and a Raspberry Pi performs event fusion and alert generation. The paper presents the design, the detection logic that combines the two modalities, and a controlled evaluation using staged crossings and recorded vibration signatures. The evaluation measures detection rate, false-alarm rate and alert latency. The results are preliminary and establish feasibility under controlled conditions. They do not establish performance on a live road, which requires field trials."
+  "text": "Wild animals, including elephants and deer, cross roads in Sri Lanka, and collisions endanger drivers, passengers and the animals. Fixed signage warns drivers in general but does not indicate that an animal is near a crossing at a given moment. This case study describes a low-cost prototype that combines two sensing modalities: an infrared beam across the expected crossing path, and a geophone that detects ground vibration. An Arduino at each sensing node samples its sensor, and a Raspberry Pi fuses the events. An alert is generated only when both modalities register an event within a fixed time window, which is designed to reduce false alarms from either sensor alone. The study sets out the requirements, the architecture, the fusion rule and the build, and identifies the constraints that a field study must address."
  },
  {
   "type": "h2",
@@ -21,147 +21,91 @@
  },
  {
   "type": "p",
-  "text": "Large wild animals move across Sri Lankan roads, and when they do, the consequences can be fatal. The problem is a combination of predictable crossing corridors, limited warning for drivers, and long road sections that are difficult to monitor. Fixed signage informs drivers in general, but does not indicate that an animal is present at a given moment."
+  "text": "Roads that pass through wildlife corridors present two problems. Drivers receive little warning that an animal is present at a particular point, and long road sections are difficult to monitor by hand. An early-warning system addresses the timing gap. If an animal near the road can be detected a short distance ahead of the crossing, a warning can reach approaching drivers while the risk is current."
  },
  {
   "type": "p",
-  "text": "An early-warning system addresses the timing gap. If the presence of an animal near the road can be detected a short distance ahead of the crossing, a warning can be displayed to approaching drivers, and the warning can be targeted to the section of road where the risk is current. The design goal is a system that is cheap to build, simple to maintain, and able to run unattended."
- },
- {
-  "type": "p",
-  "text": "This paper makes three contributions. It describes a two-modality prototype using low-cost components. It defines a fusion rule that uses the beam-break and vibration signals together, so that either signal alone cannot trigger an alert. And it reports a controlled evaluation of detection and false-alarm behaviour, with clear limits on what that evaluation shows."
+  "text": "The design goal was a system that is cheap to build, simple to maintain, and able to run without an operator. This case study treats the project as a design and build exercise, and it reports the engineering decisions, not the results of a field study."
  },
  {
   "type": "h2",
-  "text": "2. Related Work"
+  "text": "2. Design Requirements"
  },
  {
   "type": "p",
-  "text": "Wildlife-vehicle collision mitigation includes fencing, underpasses, animal detection systems, and driver warning signs. Camera-based animal detection has been widely studied, but it depends on lighting, needs significant processing, and can be affected by weather and vegetation. Radar and thermal sensing offer better performance in some conditions, but at higher cost."
- },
- {
-  "type": "p",
-  "text": "Seismic and vibration sensing has been used to detect human and vehicle footsteps and to monitor large animal movement, because large mammals transmit energy into the ground. Vibration sensing is independent of lighting, but it is sensitive to other sources, including traffic, wind and machinery. Combining vibration with a second, independent modality reduces false alarms from any single source. [TO FILL: add two or three verified references on wildlife detection, seismic monitoring of animals, and multi-sensor fusion. Do not submit without checking each reference.]"
+  "text": "The prototype was designed against four requirements. It had to use inexpensive, readily available components. It had to detect a crossing event from the beam and a ground-borne event from the vibration sensor. It had to avoid alerting on either signal alone, since each alone is ambiguous, with a beam break possibly caused by a small object and vibration possibly caused by traffic or wind. And it had to log events with timestamps, so that a later review could check what triggered each alert."
  },
  {
   "type": "h2",
-  "text": "3. System Design"
- },
- {
-  "type": "h3",
-  "text": "3.1 Architecture"
+  "text": "3. System Architecture"
  },
  {
   "type": "p",
-  "text": "The system has two sensing nodes and a processing unit. Each node includes an Arduino board that samples its sensors. The processing unit is a Raspberry Pi that receives events from both nodes, applies the fusion rule, and generates alerts. Communication between the Arduino nodes and the Raspberry Pi is [TO FILL: serial, wired or wireless protocol]."
+  "text": "The system has two sensing nodes and a processing unit. Figure 1 shows the architecture."
  },
  {
-  "type": "h3",
-  "text": "3.2 Infrared Beam-Break Module"
- },
- {
-  "type": "p",
-  "text": "An infrared emitter and receiver pair forms a beam across the expected crossing path. An interruption of the beam, lasting longer than a minimum duration, is recorded as a crossing candidate. The minimum duration filters out small objects and brief disturbances. [TO FILL: beam length, mounting height, emitter and receiver models, and the minimum duration used.]"
- },
- {
-  "type": "h3",
-  "text": "3.3 Seismic Vibration Module"
+  "type": "figure",
+  "src": "/papers/figures/wildlife-early-warning-prototype-1.png",
+  "width": 1573,
+  "height": 285,
+  "alt": "Figure 1. Architecture of the two-modality early-warning prototype.",
+  "caption": "Figure 1. Architecture of the two-modality early-warning prototype."
  },
  {
   "type": "p",
-  "text": "A geophone, coupled to the ground, records vibration. The Arduino samples the signal, computes a short-window amplitude measure, and flags a vibration event when the measure exceeds a threshold that was set from background recordings. [TO FILL: geophone model, sampling rate, window length, and how the threshold was set.]"
+  "text": "Node A is the infrared beam-break array. An emitter and receiver pair forms a beam across the expected crossing path. An interruption of the beam longer than a minimum duration is recorded as a crossing candidate, and the minimum duration filters out brief disturbances and small objects."
  },
  {
   "type": "p",
-  "text": "Geophones measure ground velocity and are sensitive to nearby traffic, so the threshold and frequency band are important design choices. [TO FILL: state the frequency band used and any filtering applied.]"
- },
- {
-  "type": "h3",
-  "text": "3.4 Fusion Rule"
+  "text": "Node B is the geophone. A geophone coupled to the ground measures vibration. The Arduino computes a short-window amplitude measure and flags a vibration event when the measure exceeds a threshold. Geophones respond to ground motion from nearby traffic as well as from animals, so the threshold and the frequency band are the main design choices at this node."
  },
  {
   "type": "p",
-  "text": "An alert is generated only when a beam-break event and a vibration event occur within a defined time window. A beam break without vibration may be a small object or a fault, and vibration without a beam break may be traffic or wind. Requiring both reduces false alarms, at the cost of possibly missing an animal that crosses without a strong vibration signal. This trade-off is discussed in Section 6."
- },
- {
-  "type": "p",
-  "text": "[TO FILL: state the time window used, and explain how it was chosen.]"
- },
- {
-  "type": "h3",
-  "text": "3.5 Alerting"
- },
- {
-  "type": "p",
-  "text": "When an alert is generated, the Raspberry Pi logs the event with a timestamp and triggers the warning output. [TO FILL: describe the warning output, such as a display, a roadside light or a message to a monitoring station, and whether any output was tested.]"
+  "text": "The processing unit is a Raspberry Pi. It receives events from both nodes, applies the fusion rule, logs every event with a timestamp, and generates the alert when the rule is met."
  },
  {
   "type": "h2",
-  "text": "4. Evaluation Method"
- },
- {
-  "type": "h3",
-  "text": "4.1 Setup"
+  "text": "4. Fusion Rule"
  },
  {
   "type": "p",
-  "text": "The evaluation was carried out in a controlled setup. Crossings were simulated using [TO FILL: describe the staged method, for example a person walking across the beam at a set speed, or a recorded vibration signature played through a transducer]. The geophone was placed in [TO FILL: describe the ground surface and coupling]. No wild elephants or deer were used in the evaluation."
+  "text": "An alert requires a beam-break event and a vibration event within a defined time window. Figure 2 shows the logic. A beam break on its own is logged as a possible small object or fault. A vibration on its own is logged as possible traffic or wind. Requiring both reduces the chance of an alert from either source alone, at the cost of possibly missing an animal that crosses quietly or with little ground vibration. The trade-off is the central design decision in the system, and it can only be judged properly in a field study."
  },
  {
-  "type": "h3",
-  "text": "4.2 Test Conditions"
- },
- {
-  "type": "p",
-  "text": "Tests were run under [TO FILL: lighting conditions, background noise, and whether traffic was simulated]. Each condition was repeated [TO FILL: number of trials per condition]."
- },
- {
-  "type": "h3",
-  "text": "4.3 Measures"
- },
- {
-  "type": "p",
-  "text": "The evaluation records four measures. Detection rate is the proportion of staged crossings that produced an alert. False-alarm rate is the number of alerts produced when no crossing was staged, per hour of background operation. Alert latency is the time from the start of the crossing to the alert. And for each modality on its own, the detection rate is recorded to show the contribution of the fusion rule."
- },
- {
-  "type": "h3",
-  "text": "4.4 Simulation Limitations"
- },
- {
-  "type": "p",
-  "text": "Staged and simulated crossings differ from real animal movement in speed, weight, path, and the ground vibration produced. The results can therefore indicate whether the logic works, but cannot predict real detection performance. This is the main limitation of the evaluation."
+  "type": "figure",
+  "src": "/papers/figures/wildlife-early-warning-prototype-2.png",
+  "width": 1193,
+  "height": 568,
+  "alt": "Figure 2. Fusion rule: an alert requires both a beam-break and a vibration event within the window.",
+  "caption": "Figure 2. Fusion rule: an alert requires both a beam-break and a vibration event within the window."
  },
  {
   "type": "h2",
-  "text": "5. Results"
+  "text": "5. Build and Controlled Demonstration"
  },
  {
   "type": "p",
-  "text": "[TO FILL: report detection rate for the fused system and for each modality alone, with the number of trials and a 95 percent confidence interval. Report false-alarm rate per hour of background operation, and median and range of alert latency. Include a short table comparing the fused rule with each single-sensor rule.]"
+  "text": "The prototype was built from the two sensing nodes and the processing unit, with the nodes connected to the Raspberry Pi through a serial link. The fusion logic and the event log were implemented on the Raspberry Pi."
  },
  {
   "type": "p",
-  "text": "Results should be reported exactly as recorded. If the vibration module alone produced many false alarms, or the beam-break module missed staged crossings in some conditions, say so and state the cause if it is known."
+  "text": "The prototype was demonstrated at the IEEE student competition in a controlled setup, using staged crossings and simulated vibration. Staged crossings differ from real animal movement in speed, weight, path and the ground vibration they produce, so the demonstration shows that the logic works as designed, not how it would perform with real animals. No records of detection, false alarms or latency were kept from the demonstration, and no such figures are reported here."
  },
  {
   "type": "h2",
-  "text": "6. Discussion"
+  "text": "6. Known Constraints"
  },
  {
   "type": "p",
-  "text": "The results support the feasibility of the two-modality design under controlled conditions. The fusion rule reduces false alarms relative to each modality alone, if [TO FILL: confirm from results]. The main trade-off is that requiring both modalities may miss an animal that crosses quietly or on a soft surface. Whether that trade-off is acceptable depends on the road, the animal, and the cost of a missed alert compared with a false one, which requires a field study to judge."
- },
- {
-  "type": "p",
-  "text": "The practical deployment questions are separate from the feasibility question. Power supply for remote sections, weatherproofing, maintenance, theft and vandalism, and the design of the warning output for drivers all need work. Early-warning systems also depend on the response of drivers and of the authorities who maintain the road, and this paper does not evaluate that response."
+  "text": "The design has constraints that a field study must address. Geophone readings are affected by traffic, wind and machinery, so the threshold and frequency band must be set for the specific road. The beam-break module is affected by vegetation, weather and objects that are not animals. Power supply for remote sections, weatherproofing, maintenance, and protection against theft and vandalism are all unaddressed by the prototype. The warning output for drivers was designed as a concept and was not tested in a road setting."
  },
  {
   "type": "h2",
-  "text": "7. Limitations"
+  "text": "7. Future Work"
  },
  {
   "type": "p",
-  "text": "The evaluation used staged crossings and controlled conditions, and no live road or wild animal was included. The sample size was [TO FILL: n]. The vibration signature of a real elephant or deer was not measured. The system was designed and evaluated by a single author, with the testing approved informally, not by a formal ethics or road-authority process. Long-term reliability, environmental durability and field maintenance were not assessed."
+  "text": "The next stage is a field study on a real road section, with permission from the relevant road and wildlife authorities. It should record detections and false alarms against real animal crossings, measure alert latency, and test the warning output with drivers. Thresholds and the fusion window should be set from recordings made on the road. Until that work is done, the system should be described as a prototype and a design, not as a deployed or validated early-warning system."
  },
  {
   "type": "h2",
@@ -169,14 +113,14 @@
  },
  {
   "type": "p",
-  "text": "The paper describes a low-cost early-warning prototype that combines infrared beam-break and geophone vibration sensing, with a fusion rule designed to reduce false alarms. The controlled evaluation shows that the logic works under simulated conditions. The next step is a field study on a real road section, with the appropriate permissions from the road and wildlife authorities, measuring performance against real animal crossings."
+  "text": "This case study describes the design and build of a two-modality early-warning prototype for wildlife crossings. The prototype combines an infrared beam with a geophone, and fuses them so that an alert requires both. The design is a credible basis for a field study. Its performance on real roads and with real animals has not been measured, and the next step is that field study."
  },
  {
   "type": "h2",
-  "text": "References"
+  "text": "Sources"
  },
  {
   "type": "p",
-  "text": "[TO FILL: add verified references on wildlife-vehicle collision mitigation in Sri Lanka, animal detection systems, seismic detection of large animals, and multi-sensor fusion. Any Sri Lankan road-collision or human-elephant conflict statistics must be taken from an official or peer-reviewed source and cited, since web search was unavailable when this draft was written.]"
+  "text": "This case study cites no external sources. The description of the road problem reflects the author’s project brief and motivation, and the competition is stated as it occurred."
  }
 ]

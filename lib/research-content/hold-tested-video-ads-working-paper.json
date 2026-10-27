@@ -145,12 +145,20 @@
   "text": "4.3 Sample Size"
  },
  {
+  "type": "figure",
+  "src": "/papers/figures/hold-tested-video-ads-working-paper-1.png",
+  "width": 1260,
+  "height": 756,
+  "alt": "Figure 1. Sample size per variant against the minimum detectable difference (two-sided alpha 0.05, power 0.80).",
+  "caption": "Figure 1. Sample size per variant against the minimum detectable difference (two-sided alpha 0.05, power 0.80)."
+ },
+ {
   "type": "p",
   "text": "The sample size calculation uses a two-sided test at 5 percent significance with 80 percent power, comparing two proportions. The calculation was recalculated for this paper."
  },
  {
   "type": "p",
-  "text": "For a baseline three-second play rate of 30 percent against 40 percent, about 357 three-second plays are needed per variant. For 30 against 35 percent, about 1,376 per variant are needed. For 30 against 33 percent, about 3,760 per variant are needed. These are counts of plays, not impressions. At a 30 percent play rate, 357 plays require roughly 1,190 impressions per variant."
+  "text": "For a baseline three-second play rate of 30 percent against 40 percent, about 357 three-second plays are needed per variant. For 30 against 35 percent, about 1,378 per variant are needed. For 30 against 33 percent, about 3,764 per variant are needed. These are counts of plays, not impressions. At a 30 percent play rate, 357 plays require roughly 1,190 impressions per variant."
  },
  {
   "type": "p",

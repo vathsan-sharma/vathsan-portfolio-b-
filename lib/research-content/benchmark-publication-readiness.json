@@ -40,6 +40,14 @@
   "text": "The third is evidence that arrives after the claim. Contamination checks, annotator agreement and prompt sensitivity analyses are often completed late, or not at all, because they were not part of the release plan."
  },
  {
+  "type": "figure",
+  "src": "/papers/figures/benchmark-publication-readiness-1.png",
+  "width": 3085,
+  "height": 130,
+  "alt": "Figure 1. The five-part readiness framework, from claim to decision.",
+  "caption": "Figure 1. The five-part readiness framework, from claim to decision."
+ },
+ {
   "type": "h2",
   "text": "3. The Five-Part Readiness Framework"
  },
@@ -117,7 +125,7 @@
  },
  {
   "type": "p",
-  "text": "The parallel to benchmark launches is direct. In both settings the failure was not dishonesty but the absence of a gate between the analysis and the message. [TO FILL: one or two sentences on the scale of the reporting cycle, e.g. number of accounts or reports per cycle, with approval for disclosure.] [TO FILL: one specific example of a claim that was narrowed or held during review, with identifying details removed.]"
+  "text": "The parallel to benchmark launches is direct. In both settings the failure was not dishonesty but the absence of a gate between the analysis and the message."
  },
  {
   "type": "h2",

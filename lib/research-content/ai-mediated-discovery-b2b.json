@@ -64,6 +64,14 @@
   "text": "H3. A material share of branded and direct traffic in B2B accounts follows an AI-mediated research step, which can be estimated through a combination of self-reported attribution and branded search trends, but not precisely from click data alone."
  },
  {
+  "type": "figure",
+  "src": "/papers/figures/ai-mediated-discovery-b2b-1.png",
+  "width": 2440,
+  "height": 130,
+  "alt": "Figure 1. Audit workflow from query set to triangulated estimate.",
+  "caption": "Figure 1. Audit workflow from query set to triangulated estimate."
+ },
+ {
   "type": "h2",
   "text": "4. Proposed Method"
  },
@@ -125,7 +133,7 @@
  },
  {
   "type": "p",
-  "text": "In a previous role preparing weekly reports for multiple clients, the author found that the most common source of confusion was not the data itself but the attribution window and the definition of a conversion. Reports that stated both definitions clearly were questioned far less often than reports that assumed the reader shared them. A similar problem arises with AI-mediated visibility, where the team and the client may use “traffic” or “awareness” to mean different things. [TO FILL: one sentence on the reporting scale and the client audience, with approval for disclosure.] [TO FILL: one example of an attribution disagreement between a client and the reporting team, and how it was resolved, with identifying details removed.]"
+  "text": "In a previous role preparing weekly reports for multiple clients, the author found that the most common source of confusion was not the data itself but the attribution window and the definition of a conversion. Reports that stated both definitions clearly were questioned far less often than reports that assumed the reader shared them. A similar problem arises with AI-mediated visibility, where the team and the client may use “traffic” or “awareness” to mean different things."
  },
  {
   "type": "h2",

@@ -104,12 +104,20 @@
   "text": "7. Proposed Test and Sample-Size Calculation"
  },
  {
+  "type": "figure",
+  "src": "/papers/figures/hold-tested-video-ads-1.png",
+  "width": 1260,
+  "height": 756,
+  "alt": "Figure 1. Sample size per variant against the minimum detectable difference (two-sided alpha 0.05, power 0.80).",
+  "caption": "Figure 1. Sample size per variant against the minimum detectable difference (two-sided alpha 0.05, power 0.80)."
+ },
+ {
   "type": "p",
   "text": "The studio has six existing hook variants. Testing them would produce the evidence needed for any public claim. The recommended design holds everything constant except the first five seconds, uses equal budget and audience, runs for three to seven days, and fixes the primary metric in advance as either the hook rate or retention at five seconds."
  },
  {
   "type": "p",
-  "text": "The sample size calculation below uses a two-sided test at 5 percent significance and 80 percent power, on a comparison of two proportions. I recalculated the figures in an earlier draft. For a baseline hook rate of 30 percent against 40 percent, roughly 357 three-second plays per variant are needed, which matches the earlier estimate. For 30 against 35 percent, about 1,376 per variant are needed. For 30 against 33 percent, about 3,760 per variant are needed, which is lower than the 4,200 figure in the earlier draft and should be used instead."
+  "text": "The sample size calculation below uses a two-sided test at 5 percent significance and 80 percent power, on a comparison of two proportions. I recalculated the figures in an earlier draft. For a baseline hook rate of 30 percent against 40 percent, roughly 357 three-second plays per variant are needed, which matches the earlier estimate. For 30 against 35 percent, about 1,378 per variant are needed. For 30 against 33 percent, about 3,764 per variant are needed, which is lower than the 4,200 figure in the earlier draft and should be used instead."
  },
  {
   "type": "p",

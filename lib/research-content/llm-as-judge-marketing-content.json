@@ -64,6 +64,14 @@
   "text": "H3. Position effects appear when the model compares two drafts in one prompt. Length effects appear as a preference for longer drafts when quality is held constant. Self-preference appears when the model is shown drafts that it generated compared with drafts written by humans."
  },
  {
+  "type": "figure",
+  "src": "/papers/figures/llm-as-judge-marketing-content-1.png",
+  "width": 753,
+  "height": 1010,
+  "alt": "Figure 1. Four-stage validation protocol and the outcome check.",
+  "caption": "Figure 1. Four-stage validation protocol and the outcome check."
+ },
+ {
   "type": "h2",
   "text": "4. Proposed Method"
  },
@@ -137,7 +145,7 @@
  },
  {
   "type": "p",
-  "text": "In a previous role managing weekly performance reporting, the author set up a sign-off checklist for the data behind each report. Early versions relied on the preparer’s judgement of whether the numbers were reliable, and the reviewers’ judgements differed. Defining each check in observable terms, and comparing reviewers on the same reports, reduced disagreement and identified two checks that were ambiguous and needed rewriting. The same process of defining observable criteria and measuring reviewer agreement is the first stage of the protocol above. [TO FILL: one sentence on the scale of the reporting process and the number of reviewers, with approval for disclosure.] [TO FILL: one example of a checklist item that was rewritten after reviewers disagreed, with identifying details removed.]"
+  "text": "In a previous role managing weekly performance reporting, the author set up a sign-off checklist for the data behind each report. Early versions relied on the preparer’s judgement of whether the numbers were reliable, and the reviewers’ judgements differed. Defining each check in observable terms, and comparing reviewers on the same reports, reduced disagreement and identified two checks that were ambiguous and needed rewriting. The same process of defining observable criteria and measuring reviewer agreement is the first stage of the protocol above."
  },
  {
   "type": "h2",
@@ -174,5 +182,9 @@
  {
   "type": "p",
   "text": "Cohen, J. (1960). A coefficient of agreement for nominal scales. Educational and Psychological Measurement."
+ },
+ {
+  "type": "p",
+  "text": "Note on sourcing: the bias findings cited in Section 2 (position, verbosity and self-preference effects) should be checked against the specific papers before publication, since web search was unavailable when this draft was written."
  }
 ]

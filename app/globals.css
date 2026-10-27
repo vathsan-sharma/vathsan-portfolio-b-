@@ -485,6 +485,23 @@ a {
   color: var(--ink);
   margin: 0 auto 14px;
 }
+.paper-figure {
+  margin: 28px auto;
+  max-width: 68ch;
+}
+.paper-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  background: #ffffff;
+}
+.paper-figure figcaption {
+  font-size: 14px;
+  color: var(--muted);
+  margin-top: 10px;
+  line-height: 1.5;
+}
 .paper-table-wrap {
   overflow-x: auto;
   margin: 16px auto;

@@ -24,6 +24,14 @@
   "text": "2. The Adoption Ladder"
  },
  {
+  "type": "figure",
+  "src": "/papers/figures/benchmark-adoption-distribution-1.png",
+  "width": 2375,
+  "height": 110,
+  "alt": "Figure 1. The adoption ladder, with the artefacts that support each step.",
+  "caption": "Figure 1. The adoption ladder, with the artefacts that support each step."
+ },
+ {
   "type": "p",
   "text": "We describe adoption as five steps. Discovery is the moment a relevant person first encounters the work. Comprehension is the point at which they understand what the benchmark measures, what it does not measure, and how it was built. Trial is the first hands-on use, such as running the evaluation on a model or inspecting the data. Citation is the act of referring to the work in a publication, documentation or internal report. Reuse is sustained adoption: the benchmark is extended, included in a suite, or used as a standard reference."
  },
@@ -121,7 +129,7 @@
  },
  {
   "type": "p",
-  "text": "The same structure applies to technical research. A researcher deciding whether to use a benchmark is making a decision, and the packaging should support that decision directly. [TO FILL: one sentence describing the reporting scale and audience, with approval for disclosure.] [TO FILL: one example of a communication change that increased stakeholder action or follow-up questions, with identifying details removed.]"
+  "text": "The same structure applies to technical research. A researcher deciding whether to use a benchmark is making a decision, and the packaging should support that decision directly."
  },
  {
   "type": "h2",

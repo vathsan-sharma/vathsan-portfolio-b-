@@ -20,6 +20,14 @@
   "text": "Quality measurement for expert data therefore needs to answer three questions. Do experts agree with one another? Is each expert accurate against items whose answers are known? Has quality changed since the project began? Each question needs a different measurement, and each measurement has known limitations that research communication should acknowledge."
  },
  {
+  "type": "figure",
+  "src": "/papers/figures/expert-data-quality-1.png",
+  "width": 883,
+  "height": 440,
+  "alt": "Figure 1. Three complementary quality measurements and the decisions they inform.",
+  "caption": "Figure 1. Three complementary quality measurements and the decisions they inform."
+ },
+ {
   "type": "h2",
   "text": "2. Agreement Between Experts"
  },
@@ -105,7 +113,7 @@
  },
  {
   "type": "p",
-  "text": "The parallel to expert data is the habit of measuring the inputs, not only the outputs. [TO FILL: one sentence on the scale of the reporting process, with approval for disclosure.] [TO FILL: one specific example of a data-quality issue found by the check and what changed as a result, with identifying details removed.]"
+  "text": "The parallel to expert data is the habit of measuring the inputs, not only the outputs."
  },
  {
   "type": "h2",

@@ -27,6 +27,16 @@ export function generateMetadata({ params }) {
 function Block({ block }) {
   if (block.type === "h2") return <h2 className="paper-h2">{block.text}</h2>;
   if (block.type === "h3") return <h3 className="paper-h3">{block.text}</h3>;
+  if (block.type === "figure") {
+    return (
+      <figure className="paper-figure">
+        {/* Figures come from the paper files, sized from their own pixel dimensions. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={block.src} alt={block.alt} width={block.width} height={block.height} loading="lazy" />
+        {block.caption && <figcaption>{block.caption}</figcaption>}
+      </figure>
+    );
+  }
   if (block.type === "table") {
     const [head, ...rest] = block.rows;
     return (
