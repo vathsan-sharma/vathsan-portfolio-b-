@@ -22,10 +22,11 @@ export default function Hero() {
       </div>
       <Image
         className="hero-photo"
-        src="/images/portrait-cutout.png"
+        src="/images/portrait-cutout.webp"
         alt="Vathsan Sharma, arms folded, smiling"
         width={1080}
         height={1080}
+        sizes="(max-width: 719px) 82vw, 520px"
         priority
       />
     </section>

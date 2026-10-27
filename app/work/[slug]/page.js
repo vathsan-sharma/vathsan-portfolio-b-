@@ -21,7 +21,7 @@ export function generateMetadata({ params }) {
   if (!item) return {};
   return pageMetadata({
     title: `${item.name} case study`,
-    description: item.summary,
+    description: `${item.summary} Read the ${item.name} case study by Vathsan Sharma.`,
     path: `/work/${item.slug}`,
   });
 }

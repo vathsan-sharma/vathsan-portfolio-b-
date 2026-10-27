@@ -10,7 +10,8 @@ import { breadcrumbSchema } from "../../lib/schema";
 export const metadata = {
   ...pageMetadata({
     title: "Blog",
-    description: "Practical answers on paid media, performance marketing, and growth.",
+    description:
+      "Practical answers on paid media, performance marketing, and growth, from a practitioner who builds and reports on campaigns every week.",
     path: "/blog",
   }),
   robots: { index: posts.length > 0 },
