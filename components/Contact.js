@@ -5,7 +5,7 @@ export default function Contact() {
         Got a funnel that <strong>leaks?</strong>
       </h2>
       <div className="ctas">
-        <a className="pill pill-dark" href="#contact">
+        <a className="pill pill-dark" href="mailto:vathsansharma@gmail.com?subject=Book%20a%20call">
           Book a call
         </a>
         <span className="pill pill-outline">vathsansharma@gmail.com</span>

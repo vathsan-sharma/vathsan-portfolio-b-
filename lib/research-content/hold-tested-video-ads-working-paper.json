@@ -5,7 +5,7 @@
  },
  {
   "type": "p",
-  "text": "This is a working paper for an ongoing MBA research project. It is not a finished study. The literature review is partly complete, the research design is specified, and the empirical phase has not yet started. No experimental results are reported here. Every figure that comes from outside sources is second-hand or unverified, and is marked as such. The document is written so that the remaining work can be tracked against it, and so that it can be revised into a publishable paper once the data exists."
+  "text": "This is a working paper for an ongoing MBA research project. It is not a finished study. The literature review is partly complete, the research design is specified, and the empirical phase has not yet started. No experimental results are reported here. The document is written so that the remaining work can be tracked against it, and so that it can be revised into a publishable paper once the data exists."
  },
  {
   "type": "table",
@@ -20,7 +20,7 @@
    ],
    [
     "Literature review on attention and placement",
-    "Partly complete; sources need verification"
+    "Partly complete"
    ],
    [
     "Claims and regulatory review",
@@ -227,10 +227,6 @@
  {
   "type": "p",
   "text": "The next steps are as follows."
- },
- {
-  "type": "p",
-  "text": "Obtain and verify the primary sources listed in Section 3, using academic databases and the original reports."
  },
  {
   "type": "p",

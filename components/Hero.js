@@ -12,7 +12,7 @@ export default function Hero() {
           Now I build campaigns that follow the <strong>customer.</strong>
         </p>
         <div className="ctas">
-          <a className="pill pill-dark" href="#contact">
+          <a className="pill pill-dark" href="mailto:vathsansharma@gmail.com?subject=Book%20a%20call">
             Book a call
           </a>
           <a className="pill pill-line" href="/about">

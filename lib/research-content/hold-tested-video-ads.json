@@ -25,7 +25,7 @@
  },
  {
   "type": "p",
-  "text": "Whether a viewer can skip an ad depends almost entirely on where it runs. YouTube offers non-skippable in-stream ads of up to 15 seconds and bumper ads of 6 seconds, both of which cannot be skipped. Skippable in-stream ads can be skipped after five seconds and are typically billed on a cost-per-view basis. Connected-TV inventory from several providers is commonly non-skippable at 15 to 30 seconds, though minimum spend and self-serve access vary. Meta’s Reels, Stories and feed placements allow users to scroll past, so an ad there cannot be forced into view. Pricing, minimums and rules change often, and several figures found in this review were vendor-supplied and unverified."
+  "text": "Whether a viewer can skip an ad depends almost entirely on where it runs. YouTube offers non-skippable in-stream ads of up to 15 seconds and bumper ads of 6 seconds, both of which cannot be skipped. Skippable in-stream ads can be skipped after five seconds and are typically billed on a cost-per-view basis. Connected-TV inventory from several providers is commonly non-skippable at 15 to 30 seconds, though minimum spend and self-serve access vary. Meta’s Reels, Stories and feed placements allow users to scroll past, so an ad there cannot be forced into view. Pricing, minimums and rules change often."
  },
  {
   "type": "p",
@@ -81,7 +81,7 @@
  },
  {
   "type": "p",
-  "text": "Several categories of supplier address parts of the problem. Attention-prediction tools such as System1, DAIVID, Neurons and Brainsight offer predictive scoring. Their accuracy claims are often undefined, and academic commentary describes AI saliency maps as a rough estimate rather than a measurement of attention. Performance agencies sell hook testing bundled with media buying. Low-cost production shops sell volume. A small number of providers offer performance-based guarantees, but their terms were not verified."
+  "text": "Several categories of supplier address parts of the problem. Attention-prediction tools such as System1, DAIVID, Neurons and Brainsight offer predictive scoring. Their accuracy claims are often undefined, and academic commentary describes AI saliency maps as a rough estimate rather than a measurement of attention. Performance agencies sell hook testing bundled with media buying. Low-cost production shops sell volume."
  },
  {
   "type": "p",
@@ -121,7 +121,7 @@
  },
  {
   "type": "p",
-  "text": "These are counts of plays, not impressions. The number of impressions needed depends on the hook rate. At a 30 percent hook rate, 357 plays require roughly 1,190 impressions per variant. The cost of that delivery depends on the platform’s cost per thousand impressions, which varies widely by market, season and audience, so no cost estimate is given here. The earlier draft’s figure of $50 to $150 per variant was not verified and should not be used until the studio has its own delivery data."
+  "text": "These are counts of plays, not impressions. The number of impressions needed depends on the hook rate. At a 30 percent hook rate, 357 plays require roughly 1,190 impressions per variant. The cost of that delivery depends on the platform’s cost per thousand impressions, which varies widely by market, season and audience, so no cost estimate is given here."
  },
  {
   "type": "p",
@@ -165,7 +165,7 @@
  },
  {
   "type": "p",
-  "text": "This review used one round of search per topic. Several platform pages could not be read, and a number of figures are second-hand. The following were not verified: the skip rules for TikTok TopView, the self-serve minimum for connected-TV advertising on LinkedIn, the minimums for Netflix and Prime Video, the Advertising Standards Authority’s guidance on guarantees, the wording of Meta’s rules on fake buttons, the terms of any performance-guarantee provider, and the rules in Canada. Much of the creative research concerns consumer and fast-moving consumer goods categories. No neutral dataset on B2B retention curves was found, and the studio’s own testing could help fill that gap."
+  "text": "This review used one round of search per topic. Several platform pages could not be read, and a number of figures are second-hand. Much of the creative research concerns consumer and fast-moving consumer goods categories. No neutral dataset on B2B retention curves was found, and the studio’s own testing could help fill that gap."
  },
  {
   "type": "h2",

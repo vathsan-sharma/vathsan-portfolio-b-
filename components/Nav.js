@@ -18,7 +18,7 @@ export default function Nav() {
           <a href="/faq">FAQ</a>
         </li>
       </ul>
-      <a href="/#contact" className="nav-cta">
+      <a href="mailto:vathsansharma@gmail.com?subject=Book%20a%20call" className="nav-cta">
         Book a call
       </a>
     </header>
